@@ -45,7 +45,8 @@ public class FormatProblem {
         Iterator<Shape> iterator = objects.iterator();
 
         while (iterator.hasNext()){
-            System.out.println(iterator.next().getArea());
+            Shape currentShape = iterator.next();
+            System.out.println(currentShape.getArea() * currentShape.getUnitCost());
         }
     }
 
