@@ -2,7 +2,6 @@ package com.thorperfp;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Formatter;
 
 public class Main {
 
@@ -37,9 +36,8 @@ public class Main {
 
 
         FormatProblem formatter = new FormatProblem(problemInstances.get(0));
-        formatter.getRoom();
+        formatter.getRoomArea();
         System.out.println();
-        formatter.getObjects();
-        System.out.println("Changes");
+        formatter.getAllObjectsAreas();
     }
 }
