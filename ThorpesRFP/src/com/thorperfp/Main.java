@@ -33,6 +33,10 @@ public class Main {
         }catch (Exception e) {//Catch exception if any
             System.err.println("Error: " + e.getMessage());
         }
+
+        
+
+        FormatProblem formatter = new FormatProblem(problemInstances.get(0));
         formatter.getRoom();
         System.out.println();
         formatter.getObjects();
