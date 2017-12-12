@@ -33,8 +33,7 @@ public class Main {
             System.err.println("Error: " + e.getMessage());
         }
 
-//        Formatter formatter = new Formatter(lines.getLine(0));
-        Formatter formatter = new Formatter("Hello # World");
+        Formatter formatter = new Formatter(lines.getLine(0));
         formatter.getRoom();
         System.out.println();
         formatter.getObjects();
