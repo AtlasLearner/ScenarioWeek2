@@ -40,6 +40,6 @@ public class Main {
         formatter.getRoom();
         System.out.println();
         formatter.getObjects();
-
+        System.out.println("Changes");
     }
 }
