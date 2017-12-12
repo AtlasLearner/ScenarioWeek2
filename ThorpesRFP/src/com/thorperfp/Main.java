@@ -34,7 +34,7 @@ public class Main {
             System.err.println("Error: " + e.getMessage());
         }
 
-        
+
 
         FormatProblem formatter = new FormatProblem(problemInstances.get(0));
         formatter.getRoom();
