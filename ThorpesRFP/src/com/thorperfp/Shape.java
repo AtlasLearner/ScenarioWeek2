@@ -63,7 +63,7 @@ public class Shape {
 
         area /= 2;
 
-        return area;
+        return Math.abs(area);
     }
 
     public Integer getUnitCost() {

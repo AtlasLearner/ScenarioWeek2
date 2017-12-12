@@ -62,6 +62,6 @@ public class Room {
 
         area /= 2;
 
-        return area;
+        return Math.abs(area);
     }
 }
