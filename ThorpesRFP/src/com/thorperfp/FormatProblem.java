@@ -55,9 +55,10 @@ public class FormatProblem {
         while (iterator.hasNext()){
             Shape currentShape = iterator.next();
             ArrayList<Coordinate> s = currentShape.getCoordinates();
+            s.trimToSize();
             int c;
-            for (c=0; c<s.size()-1; c++){
-                System.out.print("(" + s.get(c).getX_coordinate() + "," + s.get(c+1).getY_coordinate() + ")");
+            for (c=0; c<s.size(); c++){
+                System.out.print("(" + s.get(c).getX_coordinate() + "," + s.get(c).getY_coordinate() + ")");
             }
             System.out.println();
         }
