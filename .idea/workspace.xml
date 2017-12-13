@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3c1fded-8d44-4c45-bfbc-f582ba8a477c" name="Default" comment="added FillRoom class, along with rotate method">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FillRoom.java" afterPath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FillRoom.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FormatProblem.java" afterPath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FormatProblem.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Shape.java" afterPath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Shape.java" />
     </list>
@@ -18,7 +19,7 @@
       <file leaf-file-name="Room.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Room.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="741">
+            <state relative-caret-position="966">
               <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding />
             </state>
@@ -28,13 +29,13 @@
       <file leaf-file-name="FormatProblem.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FormatProblem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="605">
+              <caret line="62" column="32" lean-forward="false" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
               <folding>
-                <element signature="e#1920#1921#0" expanded="true" />
+                <element signature="e#1893#1894#0" expanded="true" />
+                <element signature="e#1922#1923#0" expanded="true" />
                 <element signature="e#1949#1950#0" expanded="true" />
                 <element signature="e#1976#1977#0" expanded="true" />
-                <element signature="e#2003#2004#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -44,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/ThorpesRFP/problems.rfp.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="72" lean-forward="true" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -53,8 +54,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="828">
+              <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#271#279#0" expanded="true" />
@@ -66,8 +67,8 @@
       <file leaf-file-name="FillRoom.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FillRoom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-238">
-              <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+            <state relative-caret-position="68">
+              <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,9 +89,16 @@
       <file leaf-file-name="Shape.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Shape.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="979">
-              <caret line="82" column="14" lean-forward="true" selection-start-line="82" selection-start-column="14" selection-end-line="82" selection-end-column="14" />
-              <folding />
+            <state relative-caret-position="929">
+              <caret line="95" column="39" lean-forward="true" selection-start-line="95" selection-start-column="39" selection-end-line="95" selection-end-column="39" />
+              <folding>
+                <element signature="e#2459#2460#0" expanded="true" />
+                <element signature="e#2502#2503#0" expanded="true" />
+                <element signature="e#2538#2539#0" expanded="true" />
+                <element signature="e#2580#2581#0" expanded="true" />
+                <element signature="e#2647#2648#0" expanded="true" />
+                <element signature="e#2693#2694#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,9 +143,9 @@
       <list>
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Room.java" />
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Main.java" />
-        <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FillRoom.java" />
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FormatProblem.java" />
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Shape.java" />
+        <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FillRoom.java" />
       </list>
     </option>
   </component>
@@ -389,10 +397,10 @@
         <state relative-caret-position="1326">
           <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
-            <element signature="e#1920#1921#0" expanded="true" />
+            <element signature="e#1893#1894#0" expanded="true" />
+            <element signature="e#1922#1923#0" expanded="true" />
             <element signature="e#1949#1950#0" expanded="true" />
             <element signature="e#1976#1977#0" expanded="true" />
-            <element signature="e#2003#2004#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -416,25 +424,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Coordinate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding>
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/problems.rfp.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -446,15 +435,49 @@
     <entry file="file://$PROJECT_DIR$/ThorpesRFP/problems.rfp.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="72" lean-forward="true" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Coordinate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding>
+            <element signature="e#307#308#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Shape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="929">
+          <caret line="95" column="39" lean-forward="true" selection-start-line="95" selection-start-column="39" selection-end-line="95" selection-end-column="39" />
+          <folding>
+            <element signature="e#2459#2460#0" expanded="true" />
+            <element signature="e#2502#2503#0" expanded="true" />
+            <element signature="e#2538#2539#0" expanded="true" />
+            <element signature="e#2580#2581#0" expanded="true" />
+            <element signature="e#2647#2648#0" expanded="true" />
+            <element signature="e#2693#2694#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="828">
+          <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#271#279#0" expanded="true" />
@@ -464,29 +487,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FormatProblem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state relative-caret-position="605">
+          <caret line="62" column="32" lean-forward="false" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
           <folding>
-            <element signature="e#1920#1921#0" expanded="true" />
+            <element signature="e#1893#1894#0" expanded="true" />
+            <element signature="e#1922#1923#0" expanded="true" />
             <element signature="e#1949#1950#0" expanded="true" />
             <element signature="e#1976#1977#0" expanded="true" />
-            <element signature="e#2003#2004#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Shape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="979">
-          <caret line="82" column="14" lean-forward="true" selection-start-line="82" selection-start-column="14" selection-end-line="82" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FillRoom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        <state relative-caret-position="68">
+          <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -20,14 +20,17 @@ public class FillRoom {
 
     public void startFilling (){
         for(Shape shape : shapes){
-            //for (double q = 0.1; q < 2*3.14; q+=0.1) {
+            System.out.println("//////////////////////////////////////////////////////////////////////////////////////");
+            for (double q = 0.1; q < 2*3.14; q+=0.0174) {
                 System.out.println("---------------------------------------------------------------------------");
                 shape.printCoords();
-                rotateShape(shape, 3.14);
+                rotateShape(shape, q);
 
                 shape.printCoords();
                 System.out.println("---------------------------------------------------------------------------");
-            //}
+                doSomething(shape);
+            }
+            System.out.println("//////////////////////////////////////////////////////////////////////////////////////");
 
         }
     }
@@ -36,23 +39,27 @@ public class FillRoom {
 
 
     public void rotateShape(Shape s,double q){
-        Coordinate point_one;
+
         double x;
         double y;
+        ArrayList<Coordinate> temp = new ArrayList<>();
 
         for (int i = 0; i < s.getCoordinates().size(); i++) {
-            point_one = s.getCoordinates().get(i);
+            Coordinate point_one = s.getCoordinates().get(i);
             x = point_one.getX_coordinate();
             y = point_one.getY_coordinate();
 
             x = x * Math.cos(q) - y * Math.sin(q);
             y = x * Math.sin(q) + y * Math.cos(q);
+            //x = x+1;
+            //y = y+1;
 
             Coordinate rotatedCoord = new Coordinate(x,y);
+            //System.out.println("Old xy: " + point_one.getX_coordinate() + ", " + point_one.getY_coordinate() + "New xy: " + rotatedCoord.getX_coordinate() + ", " + rotatedCoord.getY_coordinate());
 
-            s.getCoordinates().add(rotatedCoord);
-            s.getCoordinates().remove(0);
-
+            temp.add(rotatedCoord);
         }
+        s.setCoordinates(temp);
+
     }
 }

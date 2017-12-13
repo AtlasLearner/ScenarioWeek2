@@ -86,5 +86,15 @@ public class Shape {
         }
         System.out.println();
     }
+    public void addCoord (Coordinate coord){
+        this.coordinates.add(coord);
+    }
+    public void removeHeadCoord (){
+        this.coordinates.remove(0);
+    }
+    public void setCoordinates(ArrayList<Coordinate> coordinates){
+        this.coordinates = coordinates;
+    }
+
 
 }
