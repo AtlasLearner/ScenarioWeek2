@@ -6,14 +6,14 @@ import java.util.Iterator;
 public class FormatProblem {
 //    private String string;
     private Room room;
-    private ArrayList<Shape> objects;
+    private ArrayList<Shape> shapes;
 
     public FormatProblem(String string){
 //        this.string = string;
 
         String[] temp_string = string.split("# ");
         this.room = new Room(temp_string[0]);
-        this.objects = addShape(object_format(temp_string[1]));
+        this.shapes = addShape(object_format(temp_string[1]));
     }
 
     private ArrayList<Shape> addShape(ArrayList<String> strings){
@@ -42,13 +42,33 @@ public class FormatProblem {
     }
 
     public void getAllObjectsAreas(){ //temp method
-        Iterator<Shape> iterator = objects.iterator();
+        Iterator<Shape> iterator = shapes.iterator();
 
         while (iterator.hasNext()){
             Shape currentShape = iterator.next();
             System.out.println(currentShape.getArea() * currentShape.getUnitCost());
         }
     }
+    public void getAllObjectsCoords(){ //temp method
+        Iterator<Shape> iterator = shapes.iterator();
+
+        while (iterator.hasNext()){
+            Shape currentShape = iterator.next();
+            ArrayList<Coordinate> s = currentShape.getCoordinates();
+            int c;
+            for (c=0; c<s.size()-1; c++){
+                System.out.print("(" + s.get(c).getX_coordinate() + "," + s.get(c+1).getY_coordinate() + ")");
+            }
+            System.out.println();
+        }
+    }
+    public ArrayList<Shape> getShapes(){
+        return shapes;
+    }
+    public Room getRoom(){
+        return room;
+    }
+
 
 
 }
