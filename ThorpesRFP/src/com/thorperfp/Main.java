@@ -41,12 +41,14 @@ public class Main {
         formatter.getRoomArea();
         System.out.println();
         formatter.getAllObjectsAreas();
-        formatter.getAllObjectsCoords();
+//        formatter.getAllObjectsCoords();
 
-        FillRoom fill = new FillRoom(formatter.getRoom() , formatter.getShapes());
-        fill.startFilling();
+
+//        FillRoom fill = new FillRoom(formatter.getRoom() , formatter.getShapes());
+//        fill.startFilling();
     }
 
+    /*
     public Shape rotateShape(Shape s){
         Coordinate point_one;
         double x;
@@ -69,4 +71,5 @@ public class Main {
 
         return s;
     }
+    */
 }
