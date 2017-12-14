@@ -75,4 +75,8 @@ public abstract class Polygon {
 
         return segmentLineList;
     }
+
+    public Double getArea() {
+        return area;
+    }
 }

@@ -17,10 +17,6 @@ public class Room extends Polygon{
         this.coordinates = coordinates;
     }
 
-    public Double getArea() {
-        return area;
-    }
-
     //public ArrayList<Coordinate> getCoordinates() {return coordinates;}
 
     private ArrayList<Coordinate> placeCoordinates(String string) {

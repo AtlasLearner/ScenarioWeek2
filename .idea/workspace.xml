@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3c1fded-8d44-4c45-bfbc-f582ba8a477c" name="Default" comment="Added linearEquation Testing Class">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Tests/linearEquationSolverTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/Room.class" afterPath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/Room.class" />
+    <list default="true" id="a3c1fded-8d44-4c45-bfbc-f582ba8a477c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Polygon.java" afterPath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Polygon.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Room.java" afterPath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Room.java" />
     </list>
     <ignored path="$PROJECT_DIR$/ThorpesRFP/out/" />
@@ -20,14 +19,12 @@
       <file leaf-file-name="Room.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Room.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+            <state relative-caret-position="210">
+              <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
               <folding>
                 <element signature="method#Room#0;class#Room#0" expanded="false" />
                 <element signature="e#366#367#0" expanded="true" />
                 <element signature="e#412#413#0" expanded="true" />
-                <element signature="e#443#444#0" expanded="true" />
-                <element signature="e#470#471#0" expanded="true" />
                 <element signature="method#placeCoordinates#0;class#Room#0" expanded="false" />
                 <element signature="method#calculateArea#0;class#Room#0" expanded="false" />
               </folding>
@@ -38,9 +35,10 @@
       <file leaf-file-name="Polygon.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Polygon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="41" column="48" lean-forward="true" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+            <state relative-caret-position="285">
+              <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
               <folding>
+                <element signature="method#getPerimeterCoordinates#0;class#Polygon#0" expanded="false" />
                 <element signature="e#485#562#0" expanded="false" />
                 <element signature="e#941#953#0" expanded="true" />
                 <element signature="method#lineSegmentSeparator#0;class#Polygon#0" expanded="false" />
@@ -109,13 +107,13 @@
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FormatProblem.java" />
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FillRoom.java" />
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Coordinate.java" />
-        <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Polygon.java" />
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Shape.java" />
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/lineSegment.java" />
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/linearEquation.java" />
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/LinearEquationSolver.java" />
-        <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Room.java" />
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Tests/linearEquationSolverTest.java" />
+        <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Polygon.java" />
+        <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Room.java" />
       </list>
     </option>
   </component>
@@ -403,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513247635746</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added linearEquation Testing Class">
+      <created>1513248145081</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1513248145081</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -475,8 +480,6 @@
             <element signature="method#Room#0;class#Room#0" expanded="false" />
             <element signature="e#366#367#0" expanded="true" />
             <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
-            <element signature="e#470#471#0" expanded="true" />
             <element signature="method#placeCoordinates#0;class#Room#0" expanded="false" />
             <element signature="method#calculateArea#0;class#Room#0" expanded="false" />
           </folding>
@@ -563,8 +566,6 @@
             <element signature="method#Room#0;class#Room#0" expanded="false" />
             <element signature="e#366#367#0" expanded="true" />
             <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
-            <element signature="e#470#471#0" expanded="true" />
             <element signature="method#placeCoordinates#0;class#Room#0" expanded="false" />
             <element signature="method#calculateArea#0;class#Room#0" expanded="false" />
           </folding>
@@ -711,9 +712,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Polygon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="41" column="48" lean-forward="true" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+        <state relative-caret-position="285">
+          <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding>
+            <element signature="method#getPerimeterCoordinates#0;class#Polygon#0" expanded="false" />
             <element signature="e#485#562#0" expanded="false" />
             <element signature="e#941#953#0" expanded="true" />
             <element signature="method#lineSegmentSeparator#0;class#Polygon#0" expanded="false" />
@@ -724,14 +726,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Room.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        <state relative-caret-position="210">
+          <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding>
             <element signature="method#Room#0;class#Room#0" expanded="false" />
             <element signature="e#366#367#0" expanded="true" />
             <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
-            <element signature="e#470#471#0" expanded="true" />
             <element signature="method#placeCoordinates#0;class#Room#0" expanded="false" />
             <element signature="method#calculateArea#0;class#Room#0" expanded="false" />
           </folding>
