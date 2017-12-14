@@ -31,30 +31,69 @@ public abstract class Polygon {
             double minValue;
             double maxValue;
             char weAreFinding;
-            if(edge.getPoint1().getX_coordinate() == edge.getPoint2().getX_coordinate()){
-                minValue = edge.getPoint1().getY_coordinate();
-                maxValue = edge.getPoint2().getY_coordinate();
+            if(edge.getPoint1().getX() == edge.getPoint2().getX()){
+                if(edge.getPoint1().getY() > edge.getPoint2().getY()) {
+                    minValue = edge.getPoint2().getY();;
+                    maxValue = edge.getPoint1().getY();;
+                }else{
+                    minValue = edge.getPoint1().getY();;
+                    maxValue = edge.getPoint2().getY();;
+                }
                 weAreFinding = 'x';
             }else{
-                minValue = edge.getPoint1().getX_coordinate();
-                maxValue = edge.getPoint2().getX_coordinate();
+                if(edge.getPoint1().getX() > edge.getPoint2().getX()) {
+                    minValue = edge.getPoint2().getX();
+                    maxValue = edge.getPoint1().getX();
+                }else{
+                    minValue = edge.getPoint1().getX();
+                    maxValue = edge.getPoint2().getX();
+                }
                 weAreFinding = 'y';
             }
             //Every edge has point1 and point2, we first make an equation out of them
-            linearEquation newEquation = new linearEquation(edge.getPoint1().getX_coordinate(), edge.getPoint1().getY_coordinate(), edge.getPoint2().getX_coordinate(), edge.getPoint2().getY_coordinate());
-            System.out.println("minx = " + edge.getPoint1().getX_coordinate() + " maxX = " + edge.getPoint2().getX_coordinate());
+            linearEquation newEquation = new linearEquation(edge.getPoint1().getX(), edge.getPoint1().getY(), edge.getPoint2().getX(), edge.getPoint2().getY());
+            //System.out.println("minx = " + edge.getPoint1().getX_coordinate() + " maxX = " + edge.getPoint2().getX_coordinate());
             for(double i = minValue; i <= maxValue; i+=precision) {
                 //Here we will be getting the coordinates
                 //First rearrange the equation from Ax+By=C to y = (C - Ax) / B or x = (c - By) / A depending on the value we're trying to find
-                System.out.println(newEquation.getA() + ", " + newEquation.getB() + ", " + newEquation.getC());
+                //System.out.println(newEquation.getA() + ", " + newEquation.getB() + ", " + newEquation.getC());
                 if (weAreFinding == 'y') {
-                    double yValue = (newEquation.getC() - (newEquation.getA() * i)) / newEquation.getB();
-                    System.out.println("( " + i + ", " + yValue + ")");
-                    setOfPerimeterCoordinates.add(new Coordinate(i, yValue));
+
+                    double yValue;
+                    if(newEquation.getB() != 0) {
+                        yValue = (newEquation.getC() - (newEquation.getA() * i)) / newEquation.getB();
+                    }else{
+                        yValue = (newEquation.getC() - (newEquation.getA() * i));
+                    }
+                    System.out.println("Pending: ( " + i + ", " + yValue + ")");
+                    boolean exists = false;
+                    for(Coordinate point: setOfPerimeterCoordinates){
+                        if((point.getX_coordinate() == i) && (point.getY_coordinate() == yValue)){
+                            exists = true;
+                        }
+                    }
+                    if(!exists) {
+                        setOfPerimeterCoordinates.add(new Coordinate(i, yValue));
+                        System.out.println("Added: ( " + i + ", " + yValue + ")");
+                    }
                 }else{
-                    double xValue = (newEquation.getC() - (newEquation.getB() * i)) / newEquation.getA();
-                    System.out.println("( " + i + ", " + xValue + ")");
-                    setOfPerimeterCoordinates.add(new Coordinate(i, xValue));
+                    double xValue;
+                    if(newEquation.getA() != 0) {
+                        xValue = (newEquation.getC() - (newEquation.getB() * i)) / newEquation.getA();
+                    }else{
+                        xValue = (newEquation.getC() - (newEquation.getB() * i));
+                    }
+                    System.out.println("Pending: ( " + xValue + ", " + i + ")");
+                    boolean exists = false;
+                    for(Coordinate point: setOfPerimeterCoordinates){
+                        if((point.getX_coordinate() == xValue) && (point.getY_coordinate() == i)){
+                            exists = true;
+                        }
+                    }
+                    if(!exists) {
+                        setOfPerimeterCoordinates.add(new Coordinate(xValue, i));
+                        System.out.println("Added: ( " + xValue + ", " + i + ")");
+                    }
                 }
 
             }
@@ -74,6 +113,8 @@ public abstract class Polygon {
                 segmentLineList.add(new lineSegment(shapeCoordinatesList.get(i), shapeCoordinatesList.get(0)));
             }
         }
+
+        System.out.println("Number of segments: " + segmentLineList.size());
 
         return segmentLineList;
     }
@@ -98,4 +139,9 @@ public abstract class Polygon {
         System.out.println("Area: " + accumulator/2);
         return accumulator/2;
     }
+
+    public void printCoords(){};
+
+    public abstract Integer getUnitCost();
+
 }

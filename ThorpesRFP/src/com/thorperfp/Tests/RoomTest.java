@@ -46,4 +46,20 @@ public class RoomTest {
         Room roomTest = new Room(testPoints);
         assertThat(roomTest.calculateArea2(), is((double)70));
     }
+
+    @Test
+    public void getsCorrectNumberOfPerimeters(){
+        ArrayList<Coordinate> testPoints = new ArrayList<Coordinate>();
+        Coordinate point1 = new Coordinate((double)0,(double)0);
+        Coordinate point2 = new Coordinate((double)0, (double)2);
+        Coordinate point3 = new Coordinate((double)2, (double)2);
+        Coordinate point4 = new Coordinate((double)2, (double)0);
+
+        testPoints.add(point1);
+        testPoints.add(point2);
+        testPoints.add(point3);
+        testPoints.add(point4);
+        Room roomTest = new Room(testPoints);
+        assertThat(roomTest.getPerimeterCoordinates(1).size(), is(8));
+    }
 }

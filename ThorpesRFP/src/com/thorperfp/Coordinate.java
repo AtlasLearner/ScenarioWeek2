@@ -21,5 +21,8 @@ public class Coordinate {
         return y_coordinate;
     }
 
+    public double getX(){return x_coordinate.doubleValue();}
+
+    public double getY(){return y_coordinate.doubleValue();}
 
 }

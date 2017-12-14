@@ -61,4 +61,8 @@ public class Room extends Polygon{
         return Math.abs(area);
     }
 
+    @Override
+    public Integer getUnitCost() {
+        return null;
+    }
 }

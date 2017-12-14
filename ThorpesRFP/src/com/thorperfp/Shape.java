@@ -12,6 +12,7 @@ public class Shape extends Polygon{
 
     //Constructor for testing purposes
     public Shape(int unitCost, ArrayList<Coordinate> coordinates){
+        this.unitCost = unitCost;
         this.coordinates = coordinates;
     }
 
