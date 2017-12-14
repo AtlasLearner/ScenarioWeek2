@@ -37,39 +37,21 @@ public class Main {
 
 
 
-        FormatProblem formatter = new FormatProblem(problemInstances.get(0));
+        FormatProblem formatter = new FormatProblem(problemInstances.get(1));
         formatter.getRoomArea();
         System.out.println();
-        formatter.getAllObjectsAreas();
+//        formatter.getAllObjectsAreas();
 //        formatter.getAllObjectsCoords();
 
 
-//        FillRoom fill = new FillRoom(formatter.getRoom() , formatter.getShapes());
-//        fill.startFilling();
+        FillRoom fill = new FillRoom(formatter.getRoom() , formatter.getShapes(), 1);
+        //fill.startFilling();
+        OutFormatter answer = new OutFormatter(fill.fillTheRoom());
+        System.out.println("number of shaped placed: " + fill.fillTheRoom().size());
+        System.out.println(answer.getAllCoordinates());
+        answer.printAnswerOut();
+
+
     }
 
-    /*
-    public Shape rotateShape(Shape s){
-        Coordinate point_one;
-        double x;
-        double y;
-
-        for (int i = 0; i < s.getCoordinates().size(); i++) {
-            point_one = s.getCoordinates().get(i);
-            x = point_one.getX_coordinate();
-            y = point_one.getY_coordinate();
-
-            x = x * Math.cos(0.1) - y * Math.sin(0.1);
-            y = x * Math.sin(0.1) + y * Math.cos(0.1);
-
-            Coordinate rotatedCoord = new Coordinate(x,y);
-
-            s.getCoordinates().add(rotatedCoord);
-            s.getCoordinates().remove(0);
-
-        }
-
-        return s;
-    }
-    */
 }

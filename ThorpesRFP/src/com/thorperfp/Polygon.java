@@ -17,7 +17,7 @@ public abstract class Polygon {
         this.coordinates = coordinates;
     }
 
-    public ArrayList<Coordinate> getPerimeterCoordinates(int precision){
+    public ArrayList<Coordinate> getPerimeterCoordinates(double precision){
         //Where precision is the number of decimal places that we would like to check
         //Currently we will stick to using precision as 1 where we increment in integer values.
 
@@ -65,7 +65,7 @@ public abstract class Polygon {
                     }else{
                         yValue = (newEquation.getC() - (newEquation.getA() * i));
                     }
-                    System.out.println("Pending: ( " + i + ", " + yValue + ")");
+                    //System.out.println("Pending: ( " + i + ", " + yValue + ")");
                     boolean exists = false;
                     for(Coordinate point: setOfPerimeterCoordinates){
                         if((point.getX_coordinate() == i) && (point.getY_coordinate() == yValue)){
@@ -74,7 +74,7 @@ public abstract class Polygon {
                     }
                     if(!exists) {
                         setOfPerimeterCoordinates.add(new Coordinate(i, yValue));
-                        System.out.println("Added: ( " + i + ", " + yValue + ")");
+                        //System.out.println("Added: ( " + i + ", " + yValue + ")");
                     }
                 }else{
                     double xValue;
@@ -83,7 +83,7 @@ public abstract class Polygon {
                     }else{
                         xValue = (newEquation.getC() - (newEquation.getB() * i));
                     }
-                    System.out.println("Pending: ( " + xValue + ", " + i + ")");
+                    //System.out.println("Pending: ( " + xValue + ", " + i + ")");
                     boolean exists = false;
                     for(Coordinate point: setOfPerimeterCoordinates){
                         if((point.getX_coordinate() == xValue) && (point.getY_coordinate() == i)){
@@ -92,13 +92,13 @@ public abstract class Polygon {
                     }
                     if(!exists) {
                         setOfPerimeterCoordinates.add(new Coordinate(xValue, i));
-                        System.out.println("Added: ( " + xValue + ", " + i + ")");
+                        //System.out.println("Added: ( " + xValue + ", " + i + ")");
                     }
                 }
 
             }
         }
-        System.out.println(setOfPerimeterCoordinates.size());
+        //System.out.println(setOfPerimeterCoordinates.size());
         return setOfPerimeterCoordinates;
     }
 
@@ -114,7 +114,7 @@ public abstract class Polygon {
             }
         }
 
-        System.out.println("Number of segments: " + segmentLineList.size());
+        //System.out.println("Number of segments: " + segmentLineList.size());
 
         return segmentLineList;
     }
@@ -136,7 +136,7 @@ public abstract class Polygon {
                 accumulator += abs(((point1.getX_coordinate() * point2.getY_coordinate()) - (point1.getY_coordinate() * point2.getX_coordinate())));
             }
         }
-        System.out.println("Area: " + accumulator/2);
+        //System.out.println("Area: " + accumulator/2);
         return accumulator/2;
     }
 

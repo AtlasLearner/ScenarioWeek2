@@ -12,10 +12,13 @@ public class FillRoom {
     private ArrayList<Coordinate> perimeterCoordinates = new ArrayList<Coordinate>();
     private final ArrayList<Polygon> toBePlaced;
     private final Room room;
+    private double precision;
+    private double totalAreaAdded;
 
-    public FillRoom (Room roomVar, ArrayList<Polygon> toBePlaced){
+    public FillRoom (Room roomVar, ArrayList<Polygon> toBePlaced, double precision){
         this.room = roomVar;
         this.toBePlaced = toBePlaced;
+        this.precision = precision;
     }
 
     public ArrayList<Polygon> fillTheRoom(){
@@ -28,8 +31,8 @@ public class FillRoom {
         ShapesToCheck.add(room);
         for(Polygon shape : ShapesToCheck){
             //After the line below all perimeters of room will be stored into the arrayList
-            perimeterCoordinates.addAll(shape.getPerimeterCoordinates(1));
-            System.out.println("Perimeter Coordinate: " + "(" + shape.getPerimeterCoordinates(1).get(0).getX_coordinate() + ", " +  shape.getPerimeterCoordinates(1).get(0).getY_coordinate()+")");
+            perimeterCoordinates.addAll(shape.getPerimeterCoordinates(this.precision));
+            //System.out.println("Perimeter Coordinate: " + "(" + shape.getPerimeterCoordinates(1).get(0).getX_coordinate() + ", " +  shape.getPerimeterCoordinates(1).get(0).getY_coordinate()+")");
         }
         for(Polygon shape : toBePlaced){
             for(Coordinate perimeterPoint : perimeterCoordinates){
@@ -40,31 +43,32 @@ public class FillRoom {
                 ArrayList<Coordinate> translatedCoordinates = new ArrayList<>();
 
                 for(Coordinate point : tempShape.getCoordinates()){
-                    System.out.println(point.getY_coordinate()+perimeterPoint.getY_coordinate());
-                    System.out.println("point.y: " + point.getY_coordinate());
-                    System.out.println("perimeterPoint.y: " + perimeterPoint.getY_coordinate());
-                    System.out.println("oldP: (" + point.getX_coordinate() + ", " + point.getY_coordinate() + ")" + " newP: (" + (point.getX_coordinate()+perimeterPoint.getX_coordinate()) + ", " + (point.getY_coordinate()+perimeterPoint.getY_coordinate()) + ")");
+                    //System.out.println(point.getY_coordinate()+perimeterPoint.getY_coordinate());
+                    //System.out.println("point.y: " + point.getY_coordinate());
+                    //System.out.println("perimeterPoint.y: " + perimeterPoint.getY_coordinate());
+                    //System.out.println("oldP: (" + point.getX_coordinate() + ", " + point.getY_coordinate() + ")" + " newP: (" + (point.getX_coordinate()+perimeterPoint.getX_coordinate()) + ", " + (point.getY_coordinate()+perimeterPoint.getY_coordinate()) + ")");
                     translatedCoordinates.add(new Coordinate((point.getX_coordinate()+perimeterPoint.getX_coordinate()+(double)0),(point.getY_coordinate()+perimeterPoint.getY_coordinate()+(double)0)));
                 }
 
                 tempShape.setCoordinates(translatedCoordinates);
 
-                System.out.println("OG shape points");
+                //System.out.println("OG shape points");
                 for(Coordinate point : shape.getCoordinates()){
                     //System.out.println("newP: (" + (point.getX_coordinate()+perimeterPoint.getX_coordinate()) + ", " + (point.getY()+perimeterPoint.getY()) + ")");
-                    System.out.println("(" + (point.getX_coordinate()) + ", " + (point.getY_coordinate()) + ")");
+                    //System.out.println("(" + (point.getX_coordinate()) + ", " + (point.getY_coordinate()) + ")");
                 }
 
                 IntersectTeller teller = new IntersectTeller(ShapesToCheck, tempShape);
                 InAnotherShapeTeller teller2 = new InAnotherShapeTeller(tempShape, ShapesToCheck);
                 isOutSideRoomTeller teller3 = new isOutSideRoomTeller(room, tempShape);
                 if(!teller.isThereAnIntersection() && !teller2.isShapeOnTopOfAnotherShape() && !teller3.isTheShapeOutsideTheRoom()){
+                    tempShape.printCoords();
                     //If false then place the shape
                     //set the shape to be placed coordinates to new coordinates
                     shape.setCoordinates(tempShape.getCoordinates());
                     ShapesToCheck.add(shape);
-                    perimeterCoordinates.addAll(shape.getPerimeterCoordinates(1));
-                    System.out.println("Shape has been placed!");
+                    perimeterCoordinates.addAll(shape.getPerimeterCoordinates(this.precision));
+                    //System.out.println("Shape has been placed!");
                     for(Polygon shape2 : ShapesToCheck){
                         //After the line below all perimeters of room will be stored into the arrayList
                         System.out.println("Shape Here!");
@@ -76,19 +80,21 @@ public class FillRoom {
 
             //First check the current perimeter coordinate list
             for(Coordinate pointXY : perimeterCoordinates){
-                System.out.println("(" + pointXY.getX_coordinate() + ", " + pointXY.getY_coordinate() + ")");
+                //System.out.println("(" + pointXY.getX_coordinate() + ", " + pointXY.getY_coordinate() + ")");
             }
 
-            System.out.println("NextShape!");
-            System.out.println("Number of perimeter coordinates: " + perimeterCoordinates.size());
+            //System.out.println("NextShape!");
+            //System.out.println("Number of perimeter coordinates: " + perimeterCoordinates.size());
         }
-        System.out.println("Printing the solution coordinates");
+        //System.out.println("Printing the solution coordinates");
         for(Polygon shapeToCheck : ShapesToCheck){
-            System.out.println("Shape points: ");
+            //System.out.println("Shape points: ");
             for(Coordinate xyPoint : shapeToCheck.getCoordinates()){
-                System.out.println("(" + xyPoint.getX_coordinate() + ", " + xyPoint.getY_coordinate() + ")");
+                //System.out.println("(" + xyPoint.getX_coordinate() + ", " + xyPoint.getY_coordinate() + ")");
             }
         }
+        //ShapesToCheck.remove(ShapesToCheck.size()-1); //Remove the room before sending the result
+        ShapesToCheck.remove(0);
         return ShapesToCheck;
     }
 

@@ -68,13 +68,13 @@ public class linearEquationSolver {
             //To be an intersecting line, you must be in the both the bounds of x & y of one line, an the bounds of x & y of the other line, return true
             //Else false.
             //check the first line
-            System.out.println("Crossing at: " + "(" + xCrossingPoint + ", " + yCrossingPoint + ")");
-            System.out.println("minX: " + minX + "maxX: " + maxX);
-            System.out.println("minY: " + minY + "maxY: " + maxY);
-            System.out.println("minX2: " + minX2 + "maxX2: " + maxX2);
-            System.out.println("minY2: " + minY2 + "maxY2: " + maxY2);
+            //System.out.println("Crossing at: " + "(" + xCrossingPoint + ", " + yCrossingPoint + ")");
+            ////System.out.println("minX: " + minX + "maxX: " + maxX);
+            //System.out.println("minY: " + minY + "maxY: " + maxY);
+            //System.out.println("minX2: " + minX2 + "maxX2: " + maxX2);
+            //System.out.println("minY2: " + minY2 + "maxY2: " + maxY2);
             if(((xCrossingPoint > minX) && (xCrossingPoint < maxX)) || ((yCrossingPoint > minY) && (yCrossingPoint < maxY))){
-                System.out.println("I'm in! Round 1");
+                //System.out.println("I'm in! Round 1");
                 //then it must be in the bounds of the second line
                 if(((xCrossingPoint > minX2) && (xCrossingPoint < maxX2)) || ((yCrossingPoint > minY2) && yCrossingPoint < maxY2)){
                     return true;
