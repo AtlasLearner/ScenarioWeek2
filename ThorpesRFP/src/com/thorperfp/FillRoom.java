@@ -31,9 +31,9 @@ public class FillRoom {
         for(Polygon shape : ShapesToCheck){
             //After the line below all perimeters of room will be stored into the arrayList
             perimeterCoordinates.addAll(shape.getPerimeterCoordinates(1));
-            System.out.println("Perimeter Coordinate: " + "(" + shape.getPerimeterCoordinates(1).get(0).getX() + ", " +  shape.getPerimeterCoordinates(1).get(0).getY()+")");
-        }
+    }
         for(Polygon shape : toBePlaced){
+            boolean shapePlaced = false;
             for(Coordinate perimeterPoint : perimeterCoordinates){
 
                 //Translate the shape and check for intersection
@@ -42,47 +42,30 @@ public class FillRoom {
                 ArrayList<Coordinate> translatedCoordinates = new ArrayList<>();
 
                 for(Coordinate point : tempShape.getCoordinates()){
-                    System.out.println(point.getY()+perimeterPoint.getY());
-                    System.out.println("point.y: " + point.getY());
-                    System.out.println("perimeterPoint.y: " + perimeterPoint.getY());
                     System.out.println("oldP: (" + point.getX() + ", " + point.getY() + ")" + " newP: (" + (point.getX()+perimeterPoint.getX()) + ", " + (point.getY()+perimeterPoint.getY()) + ")");
-                    translatedCoordinates.add(new Coordinate((point.getX() +perimeterPoint.getX()+(double)0),(point.getY()+perimeterPoint.getY()+(double)0)));
+                    translatedCoordinates.add(new Coordinate((point.getX() +perimeterPoint.getX()),(point.getY()+perimeterPoint.getY())));
                 }
 
                 tempShape.setCoordinates(translatedCoordinates);
-
-                System.out.println("OG shape points");
-                for(Coordinate point : shape.getCoordinates()){
-                    //System.out.println("newP: (" + (point.getX()()+perimeterPoint.getX()()) + ", " + (point.getY()+perimeterPoint.getY()) + ")");
-                    System.out.println("(" + (point.getX()) + ", " + (point.getY()) + ")");
-                }
 
                 IntersectTeller teller = new IntersectTeller(ShapesToCheck, tempShape);
                 InAnotherShapeTeller teller2 = new InAnotherShapeTeller(tempShape, ShapesToCheck);
                 isOutSideRoomTeller teller3 = new isOutSideRoomTeller(room, tempShape);
                 if(!teller.isThereAnIntersection() && !teller2.isShapeOnTopOfAnotherShape() && !teller3.isTheShapeOutsideTheRoom()){
-                    //If false then place the shape
+                    //I then place the shape
                     //set the shape to be placed coordinates to new coordinates
                     shape.setCoordinates(tempShape.getCoordinates());
                     ShapesToCheck.add(shape);
                     perimeterCoordinates.addAll(shape.getPerimeterCoordinates(1));
                     System.out.println("Shape has been placed!");
-                    for(Polygon shape2 : ShapesToCheck){
-                        //After the line below all perimeters of room will be stored into the arrayList
-                        System.out.println("Shape Here!");
-                    }
+                    shapePlaced = true;
                     break;
+
                 }
-
             }
-
-            //First check the current perimeter coordinate list
-            for(Coordinate pointXY : perimeterCoordinates){
-                System.out.println("(" + pointXY.getX() + ", " + pointXY.getY()+ ")");
+            if(!shapePlaced){
+                System.out.println("Shape not placed");
             }
-
-            System.out.println("NextShape!");
-            System.out.println("Number of perimeter coordinates: " + perimeterCoordinates.size());
         }
         System.out.println("Printing the solution coordinates");
         for(Polygon shapeToCheck : ShapesToCheck){
@@ -91,6 +74,7 @@ public class FillRoom {
                 System.out.println("(" + xyPoint.getX() + ", " + xyPoint.getY() + ")");
             }
         }
+        ShapesToCheck.remove(0);
         return ShapesToCheck;
     }
 

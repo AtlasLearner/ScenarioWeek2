@@ -1,6 +1,5 @@
 package com.thorperfp;
 
-
 import java.io.*;
 import java.util.ArrayList;
 import java.lang.Math.*;
@@ -45,7 +44,8 @@ public class Main {
 
 
         FillRoom fill = new FillRoom(formatter.getRoom() , formatter.getShapes());
-        fill.startFilling();
+        OutFormatter answer = new OutFormatter(fill.fillTheRoom());
+        answer.printAnswer();
     }
 
 }

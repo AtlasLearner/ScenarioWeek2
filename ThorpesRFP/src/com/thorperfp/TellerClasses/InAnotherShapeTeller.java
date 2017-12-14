@@ -2,6 +2,7 @@ package com.thorperfp.TellerClasses;
 
 import com.thorperfp.Coordinate;
 import com.thorperfp.Polygon;
+import com.thorperfp.Shape;
 
 import java.util.ArrayList;
 
@@ -18,29 +19,51 @@ public class InAnotherShapeTeller {
         if(toBeCheckedAgainst.size() == 1){
             return false;
         }
-        System.out.println("size of list of checking inside another: " + toBeCheckedAgainst.get(1).getCoordinates().get(0).getX());
         double shapeMinX = getSmallestX(shape.getCoordinates());
         double shapeMinY = getSmallestY(shape.getCoordinates());
         double shapeMaxX = getLargestX(shape.getCoordinates());
         double shapeMaxY = getLargestY(shape.getCoordinates());
 
         for(int i = 1; i < toBeCheckedAgainst.size(); i++){
-            System.out.println("Checking the shape");
             double checkingShapeMinX = getSmallestX(toBeCheckedAgainst.get(i).getCoordinates());
             double checkingShapeMinY = getSmallestY(toBeCheckedAgainst.get(i).getCoordinates());
             double checkingShapeMaxX = getLargestX(toBeCheckedAgainst.get(i).getCoordinates());
             double checkingShapeMaxY = getLargestY(toBeCheckedAgainst.get(i).getCoordinates());
+            System.out.println("sMaxX: " + shapeMaxX + " sMinX: " + shapeMinX + " sMaxY: " + shapeMaxY + " sMinY: " + shapeMinY);
+            System.out.println("cShMaxX: " + checkingShapeMaxX + " cShMinX: " + checkingShapeMinX + " cShMaxY: " + checkingShapeMaxY + " cShMinY: " + checkingShapeMinY);
 
-            if((shapeMaxX >= checkingShapeMinX) && (shapeMaxX <= checkingShapeMaxX)){
-                if((shapeMaxY >= checkingShapeMinY) && (shapeMaxY <= checkingShapeMaxY)){
-                    if((shapeMinX >= checkingShapeMinX) && (shapeMinX <= checkingShapeMaxX)){
-                        if((shapeMinY >= checkingShapeMinY) && (shapeMinY <= checkingShapeMaxY)){
-                            return true;
-                        }
+            //Check if the placing shape is inside another
+            int foundInsideOfAnother = 0;
+
+            for(Coordinate points : shape.getCoordinates()){
+                if((points.getX() <= checkingShapeMaxX) && (points.getX() >= checkingShapeMinX)){
+                    if((points.getY() <= checkingShapeMaxY) && (points.getY() >= checkingShapeMinY)){
+                        foundInsideOfAnother++;
                     }
                 }
             }
+            //Check if there is a shape inside the placed shape
+            int foundInsideOfItself = 0;
+
+            for(Coordinate points: toBeCheckedAgainst.get(i).getCoordinates()){
+                if((points.getX() <= shapeMaxX) && (points.getX() >= shapeMinX)){
+                    if((points.getY() <= shapeMaxY) && (points.getY() >= shapeMinY)){
+                        foundInsideOfItself++;
+                    }
+                }
+            }
+            if((foundInsideOfAnother == shape.getCoordinates().size()) || (foundInsideOfItself == toBeCheckedAgainst.get(i).getCoordinates().size())){
+                System.out.println("I am in a shape! or a shape is inside me!");
+                return true;
+
+            }else{
+                return false;
+            }
+
+
+
         }
+
         return false;
     }
 

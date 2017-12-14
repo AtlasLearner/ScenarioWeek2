@@ -7,6 +7,7 @@ import java.util.ArrayList;
  */
 public class Shape extends Polygon{
 
+    private boolean isRoom = false;
     private Integer unitCost;
     private double cost;
 
@@ -14,6 +15,13 @@ public class Shape extends Polygon{
     public Shape(int unitCost, ArrayList<Coordinate> coordinates){
         this.unitCost = unitCost;
         this.coordinates = coordinates;
+    }
+
+    public Shape(int unitCost, double[] listOfCoordinates){
+        ArrayList<Coordinate> tempCo = new ArrayList<>();
+        for(int i = 0; i < (listOfCoordinates.length/2); i++){
+            tempCo.add(new Coordinate(listOfCoordinates[i]))
+        }
     }
 
     public Shape(String s){
@@ -100,6 +108,8 @@ public class Shape extends Polygon{
     //public ArrayList<Coordinate> getCoordinates() {return coordinates;}
 
     //public void setCoordinates(ArrayList<Coordinate> coordinates){this.coordinates = coordinates;}
+
+
 
 
 

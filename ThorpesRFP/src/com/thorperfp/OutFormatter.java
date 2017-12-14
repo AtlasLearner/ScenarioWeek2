@@ -7,16 +7,34 @@ import java.util.List;
  */
 public class OutFormatter {
 
-    private final List<Shape> shapes;
+    private final List<Polygon> shapes;
 
-    public OutFormatter(List<Shape> shapes){
+    public void printAnswer(){
+
+        for(int i = 0; i < shapes.size(); i++){
+            for(int j = 0; j < shapes.get(i).getCoordinates().size(); j++){
+                if(j != shapes.get(i).getCoordinates().size()-1) {
+                    System.out.print("(" + shapes.get(i).getCoordinates().get(j).getX() + "," + shapes.get(i).getCoordinates().get(j).getY() + "), ");
+                }else{
+                    System.out.print("(" + shapes.get(i).getCoordinates().get(j).getX() + "," + shapes.get(i).getCoordinates().get(j).getY() + ")");
+                }
+            }
+            if(i != shapes.size()-1) {
+                System.out.print("; ");
+            }
+        }
+
+    }
+
+    public OutFormatter(List<Polygon> shapes){
+
         this.shapes = shapes;
     }
 
     public String getAllCoordinates(){
         String all_coordinates = "";
         for (int i = 0; i < shapes.size(); i++){
-            Shape shape = shapes.get(i);
+            Polygon shape = shapes.get(i);
             String temp = getCoordinatesOfAShape(shape);
             all_coordinates.concat(temp);
 
@@ -29,7 +47,7 @@ public class OutFormatter {
     }
 
 
-    private String getCoordinatesOfAShape(Shape shape){
+    private String getCoordinatesOfAShape(Polygon shape){
         String shape_coordinate_string = "";
         List<Coordinate> shape_coordinates = shape.getCoordinates();
         for (int i = 0; i < shape_coordinates.size(); i++){

@@ -8,8 +8,10 @@ public abstract class Polygon {
     ArrayList<Coordinate> coordinates;
     double area;
 
+   boolean isRoom;
+
     //Setter and getter methods for the coordinate arraylist
-    public ArrayList<Coordinate> getCoordinates(){
+    public ArrayList<Coordinate> getCoordinates() {
         return coordinates;
     }
 
@@ -17,7 +19,7 @@ public abstract class Polygon {
         this.coordinates = coordinates;
     }
 
-    public ArrayList<Coordinate> getPerimeterCoordinates(int precision){
+    public ArrayList<Coordinate> getPerimeterCoordinates(int precision) {
         //Where precision is the number of decimal places that we would like to check
         //Currently we will stick to using precision as 1 where we increment in integer values.
 
@@ -27,24 +29,28 @@ public abstract class Polygon {
         ArrayList<Coordinate> setOfPerimeterCoordinates = new ArrayList<Coordinate>(); //Will store our perimeter coordinates
 
         ArrayList<lineSegment> edges = lineSegmentSeparator();
-        for(lineSegment edge : edges){
+        for (lineSegment edge : edges) {
             double minValue;
             double maxValue;
             char weAreFinding;
-            if(edge.getPoint1().getX() == edge.getPoint2().getX()){
-                if(edge.getPoint1().getY() > edge.getPoint2().getY()) {
-                    minValue = edge.getPoint2().getY();;
-                    maxValue = edge.getPoint1().getY();;
-                }else{
-                    minValue = edge.getPoint1().getY();;
-                    maxValue = edge.getPoint2().getY();;
+            if (edge.getPoint1().getX() == edge.getPoint2().getX()) {
+                if (edge.getPoint1().getY() > edge.getPoint2().getY()) {
+                    minValue = edge.getPoint2().getY();
+                    ;
+                    maxValue = edge.getPoint1().getY();
+                    ;
+                } else {
+                    minValue = edge.getPoint1().getY();
+                    ;
+                    maxValue = edge.getPoint2().getY();
+                    ;
                 }
                 weAreFinding = 'x';
-            }else{
-                if(edge.getPoint1().getX() > edge.getPoint2().getX()) {
+            } else {
+                if (edge.getPoint1().getX() > edge.getPoint2().getX()) {
                     minValue = edge.getPoint2().getX();
                     maxValue = edge.getPoint1().getX();
-                }else{
+                } else {
                     minValue = edge.getPoint1().getX();
                     maxValue = edge.getPoint2().getX();
                 }
@@ -53,68 +59,67 @@ public abstract class Polygon {
             //Every edge has point1 and point2, we first make an equation out of them
             linearEquation newEquation = new linearEquation(edge.getPoint1().getX(), edge.getPoint1().getY(), edge.getPoint2().getX(), edge.getPoint2().getY());
             //System.out.println("minx = " + edge.getPoint1().getX()() + " maxX = " + edge.getPoint2().getX()());
-            for(double i = minValue; i <= maxValue; i+=precision) {
+            for (double i = minValue; i <= maxValue; i += precision) {
                 //Here we will be getting the coordinates
                 //First rearrange the equation from Ax+By=C to y = (C - Ax) / B or x = (c - By) / A depending on the value we're trying to find
                 //System.out.println(newEquation.getA() + ", " + newEquation.getB() + ", " + newEquation.getC());
                 if (weAreFinding == 'y') {
 
                     double yValue;
-                    if(newEquation.getB() != 0) {
+                    if (newEquation.getB() != 0) {
                         yValue = (newEquation.getC() - (newEquation.getA() * i)) / newEquation.getB();
-                    }else{
+                    } else {
                         yValue = (newEquation.getC() - (newEquation.getA() * i));
                     }
-                    System.out.println("Pending: ( " + i + ", " + yValue + ")");
+                    //System.out.println("Pending: ( " + i + ", " + yValue + ")");
                     boolean exists = false;
-                    for(Coordinate point: setOfPerimeterCoordinates){
-                        if((point.getX() == i) && (point.getY() == yValue)){
+                    for (Coordinate point : setOfPerimeterCoordinates) {
+                        if ((point.getX() == i) && (point.getY() == yValue)) {
                             exists = true;
                         }
                     }
-                    if(!exists) {
+                    if (!exists) {
                         setOfPerimeterCoordinates.add(new Coordinate(i, yValue));
-                        System.out.println("Added: ( " + i + ", " + yValue + ")");
+                        //System.out.println("Added: ( " + i + ", " + yValue + ")");
                     }
-                }else{
+                } else {
                     double xValue;
-                    if(newEquation.getA() != 0) {
+                    if (newEquation.getA() != 0) {
                         xValue = (newEquation.getC() - (newEquation.getB() * i)) / newEquation.getA();
-                    }else{
+                    } else {
                         xValue = (newEquation.getC() - (newEquation.getB() * i));
                     }
-                    System.out.println("Pending: ( " + xValue + ", " + i + ")");
+                    //System.out.println("Pending: ( " + xValue + ", " + i + ")");
                     boolean exists = false;
-                    for(Coordinate point: setOfPerimeterCoordinates){
-                        if((point.getX() == xValue) && (point.getY() == i)){
+                    for (Coordinate point : setOfPerimeterCoordinates) {
+                        if ((point.getX() == xValue) && (point.getY() == i)) {
                             exists = true;
                         }
                     }
-                    if(!exists) {
+                    if (!exists) {
                         setOfPerimeterCoordinates.add(new Coordinate(xValue, i));
-                        System.out.println("Added: ( " + xValue + ", " + i + ")");
+                        //System.out.println("Added: ( " + xValue + ", " + i + ")");
                     }
                 }
 
             }
         }
-        System.out.println(setOfPerimeterCoordinates.size());
         return setOfPerimeterCoordinates;
     }
 
-    public ArrayList<lineSegment> lineSegmentSeparator(){
+    public ArrayList<lineSegment> lineSegmentSeparator() {
         ArrayList<lineSegment> segmentLineList = new ArrayList<lineSegment>();
         ArrayList<Coordinate> shapeCoordinatesList = this.getCoordinates();
 
-        for(int i = 0; i < shapeCoordinatesList.size(); i++){
-            if(i != (shapeCoordinatesList.size()-1)){
-                segmentLineList.add(new lineSegment(shapeCoordinatesList.get(i), shapeCoordinatesList.get(i+1)));
-            }else{
+        for (int i = 0; i < shapeCoordinatesList.size(); i++) {
+            if (i != (shapeCoordinatesList.size() - 1)) {
+                segmentLineList.add(new lineSegment(shapeCoordinatesList.get(i), shapeCoordinatesList.get(i + 1)));
+            } else {
                 segmentLineList.add(new lineSegment(shapeCoordinatesList.get(i), shapeCoordinatesList.get(0)));
             }
         }
 
-        System.out.println("Number of segments: " + segmentLineList.size());
+        //System.out.println("Number of segments: " + segmentLineList.size());
 
         return segmentLineList;
     }
@@ -123,25 +128,73 @@ public abstract class Polygon {
         return area;
     }
 
-    public double calculateArea2(){
+    public double calculateArea2() {
         double accumulator = 0;
-        for(int i = 0; i < coordinates.size(); i++) {
+        for (int i = 0; i < coordinates.size(); i++) {
             if (i != (coordinates.size() - 1)) {
                 Coordinate point1 = coordinates.get(i);
                 Coordinate point2 = coordinates.get(i + 1);
                 accumulator += abs(((point1.getX() * point2.getY()) - (point1.getY() * point2.getX())));
-            }else{
+            } else {
                 Coordinate point2 = coordinates.get(0);
                 Coordinate point1 = coordinates.get(i);
                 accumulator += abs(((point1.getX() * point2.getY()) - (point1.getY() * point2.getX())));
             }
         }
-        System.out.println("Area: " + accumulator/2);
-        return accumulator/2;
+        //System.out.println("Area: " + accumulator/2);
+        return accumulator / 2;
     }
 
-    public void printCoords(){};
+    public void printCoords() {
+    }
+
+    ;
 
     public abstract Integer getUnitCost();
+
+
+    public double getMaxX (){
+        double largestPoint = this.coordinates.get(0).getX();
+        for(Coordinate pointers : this.coordinates) {
+            if(largestPoint < pointers.getX()){
+                largestPoint = pointers.getX();
+            }
+        }
+        return largestPoint;
+    }
+
+    public double getMaxY (){
+        double largestPoint = this.coordinates.get(0).getY();
+        for(Coordinate pointers : this.coordinates) {
+            if(largestPoint < pointers.getY()){
+                largestPoint = pointers.getY();
+            }
+        }
+        return largestPoint;
+    }
+
+    public double getMinX(){
+        double smallestPoint = this.coordinates.get(0).getX();
+        for(Coordinate pointers : this.coordinates){
+            if(smallestPoint > pointers.getX()){
+                smallestPoint = pointers.getX();
+            }
+        }
+        return smallestPoint;
+    }
+
+    public double getMinY(){
+        double smallestPoint = this.coordinates.get(0).getY();
+        for(Coordinate pointers : this.coordinates){
+            if(smallestPoint > pointers.getY()){
+                smallestPoint = pointers.getY();
+            }
+        }
+        return smallestPoint;
+    }
+
+    public boolean isItARoom(){
+        return isRoom;
+    }
 
 }

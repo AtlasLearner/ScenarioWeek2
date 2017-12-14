@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class IntersectTeller {
     private ArrayList<Polygon> toCheck = new ArrayList<Polygon>();
     private Shape toBePlaced;
-    private Room room;
+
 
     public IntersectTeller(ArrayList<Polygon> toCheck, Shape toBePlaced){
         this.toBePlaced = toBePlaced;
@@ -15,10 +15,10 @@ public class IntersectTeller {
     }
 
     //For testing purposes
-    public IntersectTeller(Room room, Shape toBePlaced){
-        this.room = room;
-        this.toBePlaced = toBePlaced;
-    }
+//    public IntersectTeller(Room room, Shape toBePlaced){
+//        this.room = room;
+//        this.toBePlaced = toBePlaced;
+//    }
 
     public boolean isThereAnIntersection(){
         //First check if the thing is intersecting with the room
@@ -31,19 +31,19 @@ public class IntersectTeller {
          */
         //Add room to the start of the array of toCheck
         ArrayList<lineSegment> toBePlacedEdges = toBePlaced.lineSegmentSeparator();
-        boolean hasIntersect = false;
+
         for(Polygon shape : toCheck) {
             ArrayList<lineSegment> comparingEdges = shape.lineSegmentSeparator();
             for (lineSegment edge : toBePlacedEdges) {
                 for (lineSegment ComparingEdge : comparingEdges) {
                     linearEquationSolver solver = new linearEquationSolver(edge.getPoint1(), edge.getPoint2(), ComparingEdge.getPoint1(), ComparingEdge.getPoint2());
-                    if (solver.solveEquations()) {
+                    if (solver.solveEquations(toBePlaced, shape)) {
                         return true;
                     }
                 }
             }
         }
-        return hasIntersect;
+        return false;
     }
 
 }

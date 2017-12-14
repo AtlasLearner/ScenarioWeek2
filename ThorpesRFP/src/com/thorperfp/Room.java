@@ -7,6 +7,8 @@ import java.util.ArrayList;
  */
 public class Room extends Polygon{
 
+    private boolean isRoom = true;
+
     public Room(String string){
         this.coordinates = placeCoordinates(string);
         this.area = calculateArea(coordinates);

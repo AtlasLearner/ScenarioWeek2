@@ -1,5 +1,7 @@
 package com.thorperfp;
 
+import java.util.ArrayList;
+
 public class linearEquationSolver {
     private Coordinate point11;
     private Coordinate point12;
@@ -14,7 +16,7 @@ public class linearEquationSolver {
 
     }
 
-    public boolean solveEquations() {
+    public boolean solveEquations(Shape placingShape, Polygon comparingShape) {
         //Make the first equation in form Ax+By = C
         linearEquation lineSeg1 = new linearEquation(point11.getX(), point11.getY(), point12.getX(), point12.getY());
         linearEquation lineSeg2 = new linearEquation(point21.getX(), point21.getY(), point22.getX(), point22.getY());
@@ -68,19 +70,43 @@ public class linearEquationSolver {
             //To be an intersecting line, you must be in the both the bounds of x & y of one line, an the bounds of x & y of the other line, return true
             //Else false.
             //check the first line
-            System.out.println("Crossing at: " + "(" + xCrossingPoint + ", " + yCrossingPoint + ")");
-            System.out.println("minX: " + minX + "maxX: " + maxX);
-            System.out.println("minY: " + minY + "maxY: " + maxY);
-            System.out.println("minX2: " + minX2 + "maxX2: " + maxX2);
-            System.out.println("minY2: " + minY2 + "maxY2: " + maxY2);
-            if(((xCrossingPoint > minX) && (xCrossingPoint < maxX)) || ((yCrossingPoint > minY) && (yCrossingPoint < maxY))){
-                System.out.println("I'm in! Round 1");
+            //First fault or misconception found - here should be && or ||
+
+            System.out.println("Crossing Analysis: minX: " + minX + "maxX: " + maxX + "minY " + minY + "maxY: " + maxY);
+            System.out.println("Crossing Analysis: minX2 :" + minX2 + "maxX: " + maxX2 + "minY2 " + minY2 + "maxY2: " + maxY2);
+            System.out.println("Crossing at: x: " + xCrossingPoint + " y: " + yCrossingPoint);
+            if(((xCrossingPoint > minX) && (xCrossingPoint < maxX)) && ((yCrossingPoint > minY) && (yCrossingPoint < maxY))){
                 //then it must be in the bounds of the second line
-                if(((xCrossingPoint > minX2) && (xCrossingPoint < maxX2)) || ((yCrossingPoint > minY2) && yCrossingPoint < maxY2)){
+                if(((xCrossingPoint > minX2) && (xCrossingPoint < maxX2)) && ((yCrossingPoint > minY2) && yCrossingPoint < maxY2)){
+
                     return true;
                 }
             }
+            if(!(comparingShape instanceof Room)) {
+                System.out.println("I am not in a room");
+                if (((xCrossingPoint == minX) && (yCrossingPoint == minY)) || ((xCrossingPoint == maxX) && yCrossingPoint == maxY)) {
+                    //Try to find perimeter coordinates inside the existing shape.
+                    ArrayList<Coordinate> periPoint = placingShape.getPerimeterCoordinates(1);
+                    int periPointsFound = 0;
+                    double maxPeriX = comparingShape.getMaxX();
+                    double minPeriX = comparingShape.getMinX();
+                    double maxPeriY = comparingShape.getMaxY();
+                    double minPeriY = comparingShape.getMinY();
+                    System.out.println("MaxX: " +  maxPeriX + "MaxY: " + maxPeriY);
+                    for (Coordinate point : periPoint) {
+                        if (((point.getX() > minPeriX) && (point.getX() < maxPeriX)) && ((point.getY() > minPeriY) && (point.getY() < maxPeriY))) {
+                            periPointsFound++;
+                        }
+                    }
+                    if (periPointsFound > 0) {
+                        return true;
+                    }
+                }
+            }
+
+
             return false;
+
         }
     }
 }

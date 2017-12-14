@@ -19,10 +19,14 @@ public class isOutSideRoomTeller {
         //Get the maximum xy of
         double roomMaxX = getMaxX(room.getCoordinates());
         double roomMaxY = getMaxY(room.getCoordinates());
+        double roomMinX = getMinX(room.getCoordinates());
+        double roomMinY = getMinY(room.getCoordinates());
         double shapeMaxX = getMaxX(shapeToBePlaced.getCoordinates());
         double shapeMaxY = getMaxY(shapeToBePlaced.getCoordinates());
+        double shapeMinX = getMinX(shapeToBePlaced.getCoordinates());
+        double shapeMinY = getMinY(shapeToBePlaced.getCoordinates());
 
-        if((roomMaxX < shapeMaxX) || (roomMaxY < shapeMaxY)){
+        if((roomMaxX < shapeMaxX) || (roomMaxY < shapeMaxY) || (roomMinX > shapeMinX) || (roomMinY > shapeMinY)){
             return true;
         }
         return false;
@@ -47,5 +51,25 @@ public class isOutSideRoomTeller {
             }
         }
         return largestPoint;
+    }
+
+    private double getMinX(ArrayList<Coordinate> points){
+        double smallestPoint = points.get(0).getX();
+        for(Coordinate pointers : points){
+            if(smallestPoint > pointers.getX()){
+                smallestPoint = pointers.getX();
+            }
+        }
+        return smallestPoint;
+    }
+
+    private double getMinY(ArrayList<Coordinate> points){
+        double smallestPoint = points.get(0).getY();
+        for(Coordinate pointers : points){
+            if(smallestPoint > pointers.getY()){
+                smallestPoint = pointers.getY();
+            }
+        }
+        return smallestPoint;
     }
 }

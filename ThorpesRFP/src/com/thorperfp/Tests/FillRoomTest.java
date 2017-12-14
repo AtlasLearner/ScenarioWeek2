@@ -45,7 +45,7 @@ public class FillRoomTest {
         ShapesToBePlaced.add(new Shape(10, ssquarePts));
 
         FillRoom fillRoomTest = new FillRoom(testRoom, ShapesToBePlaced);
-        assertThat(fillRoomTest.fillTheRoom().size(), is(4));
+        assertThat(fillRoomTest.fillTheRoom().size(), is(3));
 
     }
 
@@ -56,5 +56,16 @@ public class FillRoomTest {
             value = true;
         }
         assertThat(value, is(true));
+    }
+
+    @Test
+    public void debuggingAlgorithm1(){
+        // (0.0,0.0), (3.0,0.0), (3.0,3.0), (0.0,3.0); (3.0,0.0), (5.0,0.0), (5.0,2.0), (3.0,2.0); (3.0,0.0), (5.0,0.0), (5.0,2.0), (3.0,2.0);
+        // (4.0,0.0), (7.0,0.0), (7.0,5.0), (1.0,5.0); (7.0,0.0), (8.5,0.0), (8.5,1.4999999999999998), (7.0,1.5)
+        ArrayList<Coordinate> s1 = new ArrayList<>();
+        ArrayList<Coordinate> s2 = new ArrayList<>();
+        ArrayList<Coordinate> s3 = new ArrayList<>();
+        ArrayList<Coordinate> s4 = new ArrayList<>();
+        ArrayList<Coordinate> s5 = new ArrayList<>();
     }
 }
