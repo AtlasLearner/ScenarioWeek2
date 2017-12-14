@@ -118,20 +118,30 @@ public class FillRoom {
 
     public void doSomething (Polygon shape){System.out.println("hello world");}
 
-
     public void rotateShape(Polygon s, double q){
 
-        double x;
-        double y;
+
         ArrayList<Coordinate> temp = new ArrayList<>();
 
         for (int i = 0; i < s.getCoordinates().size(); i++) {
-            Coordinate point_one = s.getCoordinates().get(i);
-            x = point_one.getX_coordinate();
-            y = point_one.getY_coordinate();
 
-            x = x * Math.cos(q) - y * Math.sin(q);
-            y = x * Math.sin(q) + y * Math.cos(q);
+            double x;
+            double y;
+            Coordinate point_one = s.getCoordinates().get(i);
+
+
+
+            x = point_one.getX();
+            y = point_one.getY();
+
+            double tempx = x;
+
+
+
+            x = (x * Math.cos(q)) - (y * Math.sin(q));
+            y = (tempx * Math.sin(q)) - (y * Math.cos(q));
+
+
             //x = x+1;
             //y = y+1;
 
@@ -143,4 +153,6 @@ public class FillRoom {
         s.setCoordinates(temp);
 
     }
+
+
 }
