@@ -38,7 +38,7 @@ public class Room extends Polygon{
         return list;
     }
 
-    private Double calculateArea(ArrayList<Coordinate> coordinates){
+    public Double calculateArea(ArrayList<Coordinate> coordinates){
         Double area = 0.0;
         Coordinate point_one;
         Coordinate point_two;

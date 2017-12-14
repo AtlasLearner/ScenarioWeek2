@@ -2,6 +2,8 @@ package com.thorperfp;
 
 import java.util.ArrayList;
 
+import static java.lang.StrictMath.abs;
+
 public abstract class Polygon {
     ArrayList<Coordinate> coordinates;
     double area;
@@ -78,5 +80,22 @@ public abstract class Polygon {
 
     public Double getArea() {
         return area;
+    }
+
+    public double calculateArea2(){
+        double accumulator = 0;
+        for(int i = 0; i < coordinates.size(); i++) {
+            if (i != (coordinates.size() - 1)) {
+                Coordinate point1 = coordinates.get(i);
+                Coordinate point2 = coordinates.get(i + 1);
+                accumulator += abs(((point1.getX_coordinate() * point2.getY_coordinate()) - (point1.getY_coordinate() * point2.getX_coordinate())));
+            }else{
+                Coordinate point2 = coordinates.get(0);
+                Coordinate point1 = coordinates.get(i);
+                accumulator += abs(((point1.getX_coordinate() * point2.getY_coordinate()) - (point1.getY_coordinate() * point2.getX_coordinate())));
+            }
+        }
+        System.out.println("Area: " + accumulator/2);
+        return accumulator/2;
     }
 }
