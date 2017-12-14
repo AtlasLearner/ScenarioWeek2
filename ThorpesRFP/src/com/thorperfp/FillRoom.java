@@ -6,6 +6,8 @@ import com.thorperfp.TellerClasses.isOutSideRoomTeller;
 
 import java.util.ArrayList;
 
+import static java.lang.Math.round;
+
 public class FillRoom {
 
     private ArrayList<Polygon> ShapesToCheck = new ArrayList<Polygon>();
@@ -96,14 +98,14 @@ public class FillRoom {
     public void startFilling (){
         for(Polygon shape : toBePlaced){
             System.out.println("//////////////////////////////////////////////////////////////////////////////////////");
-            for (double q = 0.1; q < 2*3.14; q+=0.0174) {
+            for (double q = 0; q < 3; q++) {
                 System.out.println("---------------------------------------------------------------------------");
                 shape.printCoords();
-                rotateShape(shape, q);
+                rotateShape(shape, Math.PI /2);
 
                 shape.printCoords();
                 System.out.println("---------------------------------------------------------------------------");
-                doSomething(shape);
+                //doSomething(shape);
             }
             System.out.println("//////////////////////////////////////////////////////////////////////////////////////");
 
@@ -115,17 +117,28 @@ public class FillRoom {
 
     public void rotateShape(Polygon s, double q){
 
-        double x;
-        double y;
+
         ArrayList<Coordinate> temp = new ArrayList<>();
 
         for (int i = 0; i < s.getCoordinates().size(); i++) {
-            Coordinate point_one = s.getCoordinates().get(i);
-            x = point_one.getX_coordinate();
-            y = point_one.getY_coordinate();
 
-            x = x * Math.cos(q) - y * Math.sin(q);
-            y = x * Math.sin(q) + y * Math.cos(q);
+            double x;
+            double y;
+            Coordinate point_one = s.getCoordinates().get(i);
+
+
+
+            x = point_one.getX();
+            y = point_one.getY();
+
+            double tempx = x;
+
+
+
+            x = (x * Math.cos(q)) - (y * Math.sin(q));
+            y = (tempx * Math.sin(q)) - (y * Math.cos(q));
+
+
             //x = x+1;
             //y = y+1;
 
