@@ -12,6 +12,11 @@ public class Room extends Polygon{
         this.area = calculateArea(coordinates);
     }
 
+    //Second constructor for testing purposes
+    public Room(ArrayList<Coordinate> coordinates){
+        this.coordinates = coordinates;
+    }
+
     public Double getArea() {
         return area;
     }
