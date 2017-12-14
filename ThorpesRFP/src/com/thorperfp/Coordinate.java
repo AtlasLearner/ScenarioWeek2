@@ -20,4 +20,6 @@ public class Coordinate {
     public Double getY_coordinate() {
         return y_coordinate;
     }
+
+
 }

@@ -5,12 +5,10 @@ import java.util.ArrayList;
 /**
  * Created by apple on 12/12/17.
  */
-public class Shape {
+public class Shape extends Polygon{
 
     private Integer unitCost;
-    private Double area;
-
-    private ArrayList<Coordinate> coordinates;
+    private double cost;
 
     public Shape(String s){
         this.unitCost = getUnitCost(s);
@@ -74,9 +72,7 @@ public class Shape {
         return area;
     }
 
-    public ArrayList<Coordinate> getCoordinates() {
-        return coordinates;
-    }
+
 
     public void printCoords(){
         ArrayList<Coordinate> s = this.getCoordinates();
@@ -86,15 +82,19 @@ public class Shape {
         }
         System.out.println();
     }
+
     public void addCoord (Coordinate coord){
         this.coordinates.add(coord);
     }
+
     public void removeHeadCoord (){
         this.coordinates.remove(0);
     }
-    public void setCoordinates(ArrayList<Coordinate> coordinates){
-        this.coordinates = coordinates;
-    }
+
+    //public ArrayList<Coordinate> getCoordinates() {return coordinates;}
+
+    //public void setCoordinates(ArrayList<Coordinate> coordinates){this.coordinates = coordinates;}
+
 
 
 }

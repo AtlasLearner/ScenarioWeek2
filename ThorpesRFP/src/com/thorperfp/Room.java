@@ -5,10 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by apple on 12/12/17.
  */
-public class Room {
-
-    private Double area;
-    private ArrayList<Coordinate> coordinates;
+public class Room extends Polygon{
 
     public Room(String string){
         this.coordinates = placeCoordinates(string);
@@ -19,9 +16,7 @@ public class Room {
         return area;
     }
 
-    public ArrayList<Coordinate> getCoordinates() {
-        return coordinates;
-    }
+    //public ArrayList<Coordinate> getCoordinates() {return coordinates;}
 
     private ArrayList<Coordinate> placeCoordinates(String string) {
         ArrayList<Coordinate> list = new ArrayList<>();

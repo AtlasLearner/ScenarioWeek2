@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3c1fded-8d44-4c45-bfbc-f582ba8a477c" name="Default" comment="added FillRoom class, along with rotate method">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FillRoom.java" afterPath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FillRoom.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FormatProblem.java" afterPath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FormatProblem.java" />
+    <list default="true" id="a3c1fded-8d44-4c45-bfbc-f582ba8a477c" name="Default" comment="Refactored Shape and Room class to extend from abstract Polygon class. Added LineSegment and LineEquation Class">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Polygon.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/lineSegment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/linearEquation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Coordinate.java" afterPath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Coordinate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Room.java" afterPath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Room.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Shape.java" afterPath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Shape.java" />
     </list>
     <ignored path="$PROJECT_DIR$/ThorpesRFP/out/" />
@@ -19,69 +23,13 @@
       <file leaf-file-name="Room.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Room.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="966">
-              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FormatProblem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FormatProblem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
-              <caret line="62" column="32" lean-forward="false" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+            <state relative-caret-position="270">
+              <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding>
-                <element signature="e#1893#1894#0" expanded="true" />
-                <element signature="e#1922#1923#0" expanded="true" />
-                <element signature="e#1949#1950#0" expanded="true" />
-                <element signature="e#1976#1977#0" expanded="true" />
+                <element signature="method#Room#0;class#Room#0" expanded="false" />
+                <element signature="method#placeCoordinates#0;class#Room#0" expanded="false" />
+                <element signature="method#calculateArea#0;class#Room#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="problems.rfp.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ThorpesRFP/problems.rfp.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="72" lean-forward="true" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="72" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="828">
-              <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#271#279#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FillRoom.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FillRoom.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="problems.rfp.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/problems.rfp.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -89,29 +37,49 @@
       <file leaf-file-name="Shape.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Shape.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="929">
-              <caret line="95" column="39" lean-forward="true" selection-start-line="95" selection-start-column="39" selection-end-line="95" selection-end-column="39" />
+            <state relative-caret-position="150">
+              <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
               <folding>
-                <element signature="e#2459#2460#0" expanded="true" />
-                <element signature="e#2502#2503#0" expanded="true" />
-                <element signature="e#2538#2539#0" expanded="true" />
-                <element signature="e#2580#2581#0" expanded="true" />
-                <element signature="e#2647#2648#0" expanded="true" />
-                <element signature="e#2693#2694#0" expanded="true" />
+                <element signature="method#printCoords#0;class#Shape#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Coordinate.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Coordinate.java">
+      <file leaf-file-name="Polygon.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Polygon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            <state relative-caret-position="555">
+              <caret line="41" column="48" lean-forward="true" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
               <folding>
-                <element signature="e#307#308#0" expanded="true" />
-                <element signature="e#342#343#0" expanded="true" />
+                <element signature="e#252#253#0" expanded="true" />
+                <element signature="e#286#287#0" expanded="true" />
+                <element signature="e#355#356#0" expanded="true" />
+                <element signature="e#401#402#0" expanded="true" />
+                <element signature="e#485#562#0" expanded="false" />
+                <element signature="e#941#953#0" expanded="true" />
+                <element signature="method#lineSegmentSeparator#0;class#Polygon#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="linearEquation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/linearEquation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lineSegment.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/lineSegment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -132,6 +100,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -141,19 +114,22 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Room.java" />
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Main.java" />
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FormatProblem.java" />
-        <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Shape.java" />
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FillRoom.java" />
+        <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Coordinate.java" />
+        <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Polygon.java" />
+        <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Shape.java" />
+        <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Room.java" />
+        <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/lineSegment.java" />
+        <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/linearEquation.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-16" />
-    <option name="y" value="-35" />
-    <option name="width" value="3200" />
-    <option name="height" value="1800" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="961" />
+    <option name="width" value="959" />
+    <option name="height" value="1054" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -170,7 +146,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
@@ -203,6 +178,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -341,24 +317,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-12" y="-12" width="3224" height="1824" extended-state="6" />
+    <frame x="961" y="0" width="959" height="1054" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1942225" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19327731" sideWeight="0.49635038" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32821143" sideWeight="0.50125" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19327731" sideWeight="0.50364965" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32821143" sideWeight="0.49875" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32821143" sideWeight="0.49875" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.249375" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944068" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23774765" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -370,6 +345,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944068" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -377,7 +353,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added FillRoom class, along with rotate method" />
-    <option name="LAST_COMMIT_MESSAGE" value="added FillRoom class, along with rotate method" />
+    <MESSAGE value="Refactored Shape and Room class to extend from abstract Polygon class. Added LineSegment and LineEquation Class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored Shape and Room class to extend from abstract Polygon class. Added LineSegment and LineEquation Class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -386,9 +363,97 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Room.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="method#Room#0;class#Room#0" expanded="false" />
+            <element signature="method#placeCoordinates#0;class#Room#0" expanded="false" />
+            <element signature="method#calculateArea#0;class#Room#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FormatProblem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="62" column="32" lean-forward="false" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+          <folding>
+            <element signature="e#1893#1894#0" expanded="true" />
+            <element signature="e#1922#1923#0" expanded="true" />
+            <element signature="e#1949#1950#0" expanded="true" />
+            <element signature="e#1976#1977#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/problems.rfp.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="72" lean-forward="true" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="50" column="6" lean-forward="true" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/problems.rfp.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Shape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="95" column="39" lean-forward="true" selection-start-line="95" selection-start-column="39" selection-end-line="95" selection-end-column="39" />
+          <folding>
+            <element signature="method#printCoords#0;class#Shape#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Coordinate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding>
+            <element signature="e#307#308#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FillRoom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1734">
           <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#Room#0;class#Room#0" expanded="false" />
+            <element signature="method#placeCoordinates#0;class#Room#0" expanded="false" />
+            <element signature="method#calculateArea#0;class#Room#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -419,7 +484,6 @@
           <caret line="38" column="31" lean-forward="false" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#271#279#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -435,59 +499,24 @@
     <entry file="file://$PROJECT_DIR$/ThorpesRFP/problems.rfp.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="72" lean-forward="true" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Coordinate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding>
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Shape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="929">
-          <caret line="95" column="39" lean-forward="true" selection-start-line="95" selection-start-column="39" selection-end-line="95" selection-end-column="39" />
-          <folding>
-            <element signature="e#2459#2460#0" expanded="true" />
-            <element signature="e#2502#2503#0" expanded="true" />
-            <element signature="e#2538#2539#0" expanded="true" />
-            <element signature="e#2580#2581#0" expanded="true" />
-            <element signature="e#2647#2648#0" expanded="true" />
-            <element signature="e#2693#2694#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <caret line="0" column="72" lean-forward="false" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="50" column="29" lean-forward="true" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+        <state relative-caret-position="720">
+          <caret line="50" column="6" lean-forward="false" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#271#279#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FormatProblem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
+        <state relative-caret-position="885">
           <caret line="62" column="32" lean-forward="false" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
           <folding>
             <element signature="e#1893#1894#0" expanded="true" />
@@ -500,11 +529,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FillRoom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+        <state relative-caret-position="345">
+          <caret line="23" column="57" lean-forward="true" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Coordinate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#307#308#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Shape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <element signature="method#printCoords#0;class#Shape#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding>
+            <element signature="method#Room#0;class#Room#0" expanded="false" />
+            <element signature="method#placeCoordinates#0;class#Room#0" expanded="false" />
+            <element signature="method#calculateArea#0;class#Room#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Polygon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="41" column="48" lean-forward="true" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+          <folding>
+            <element signature="e#252#253#0" expanded="true" />
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#355#356#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#485#562#0" expanded="false" />
+            <element signature="e#941#953#0" expanded="true" />
+            <element signature="method#lineSegmentSeparator#0;class#Polygon#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/linearEquation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/lineSegment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
