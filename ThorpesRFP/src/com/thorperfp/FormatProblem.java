@@ -1,12 +1,14 @@
 package com.thorperfp;
 
+import sun.security.tools.policytool.PolicyTool;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 
 public class FormatProblem {
 //    private String string;
     private Room room;
-    private ArrayList<Shape> shapes;
+    private ArrayList<Polygon> shapes;
 
     public FormatProblem(String string){
 //        this.string = string;
@@ -16,8 +18,8 @@ public class FormatProblem {
         this.shapes = addShape(object_format(temp_string[1]));
     }
 
-    private ArrayList<Shape> addShape(ArrayList<String> strings){
-        ArrayList<Shape> shapes = new ArrayList<>();
+    private ArrayList<Polygon> addShape(ArrayList<String> strings){
+        ArrayList<Polygon> shapes = new ArrayList<>();
 
         for (String string : strings){
             shapes.add(new Shape(string));
@@ -42,18 +44,18 @@ public class FormatProblem {
     }
 
     public void getAllObjectsAreas(){ //temp method
-        Iterator<Shape> iterator = shapes.iterator();
+        Iterator<Polygon> iterator = shapes.iterator();
 
         while (iterator.hasNext()){
-            Shape currentShape = iterator.next();
+            Polygon currentShape = iterator.next();
             System.out.println(currentShape.getArea() * currentShape.getUnitCost());
         }
     }
     public void getAllObjectsCoords(){ //temp method
-        Iterator<Shape> iterator = shapes.iterator();
+        Iterator<Polygon> iterator = shapes.iterator();
 
         while (iterator.hasNext()){
-            Shape currentShape = iterator.next();
+            Polygon currentShape = iterator.next();
             ArrayList<Coordinate> s = currentShape.getCoordinates();
 
             int c;
@@ -63,11 +65,11 @@ public class FormatProblem {
             System.out.println();
         }
     }
-    public ArrayList<Shape> getShapes(){
-        return shapes;
+    public ArrayList<Polygon> getShapes(){
+        return this.shapes;
     }
     public Room getRoom(){
-        return room;
+        return this.room;
     }
 
 

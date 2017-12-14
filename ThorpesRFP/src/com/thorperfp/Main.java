@@ -41,35 +41,11 @@ public class Main {
         formatter.getRoomArea();
         System.out.println();
         formatter.getAllObjectsAreas();
-//        formatter.getAllObjectsCoords();
+        formatter.getAllObjectsCoords();
 
 
-//        FillRoom fill = new FillRoom(formatter.getRoom() , formatter.getShapes());
-//        fill.startFilling();
+        FillRoom fill = new FillRoom(formatter.getRoom() , formatter.getShapes());
+        fill.startFilling();
     }
 
-    /*
-    public Shape rotateShape(Shape s){
-        Coordinate point_one;
-        double x;
-        double y;
-
-        for (int i = 0; i < s.getCoordinates().size(); i++) {
-            point_one = s.getCoordinates().get(i);
-            x = point_one.getX_coordinate();
-            y = point_one.getY_coordinate();
-
-            x = x * Math.cos(0.1) - y * Math.sin(0.1);
-            y = x * Math.sin(0.1) + y * Math.cos(0.1);
-
-            Coordinate rotatedCoord = new Coordinate(x,y);
-
-            s.getCoordinates().add(rotatedCoord);
-            s.getCoordinates().remove(0);
-
-        }
-
-        return s;
-    }
-    */
 }
