@@ -61,8 +61,8 @@ public class Shape extends Polygon{
                 point_two = coordinates.get(0);
             }
 
-            area += point_one.getX_coordinate() * point_two.getY_coordinate();
-            area -= point_one.getY_coordinate() * point_two.getX_coordinate();
+            area += point_one.getX() * point_two.getY();
+            area -= point_one.getY() * point_two.getX();
         }
 
         area /= 2;
@@ -84,7 +84,7 @@ public class Shape extends Polygon{
         ArrayList<Coordinate> s = this.getCoordinates();
         int c;
         for (c=0; c<s.size(); c++){
-            System.out.print("(" + s.get(c).getX_coordinate() + "," + s.get(c).getY_coordinate() + ")");
+            System.out.print("(" + s.get(c).getX() + "," + s.get(c).getY() + ")");
         }
         System.out.println();
     }

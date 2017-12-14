@@ -62,7 +62,7 @@ public class linearEquationSolverTest {
         expectedPerimeter.add(new Coordinate((double)0,(double)2));
         linearEquationSolver solverTest = new linearEquationSolver(roompt1, roompt2, roompt3, roompt4);
         ArrayList<Coordinate> perimeter = testRoom.getPerimeterCoordinates(1);
-        assertThat(perimeter.get(0).getX_coordinate(), is(expectedPerimeter.get(0).getX_coordinate()));
+        assertThat(perimeter.get(0).getX()(), is(expectedPerimeter.get(0).getX()()));
 
     }
 

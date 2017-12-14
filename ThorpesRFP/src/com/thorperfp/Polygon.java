@@ -52,7 +52,7 @@ public abstract class Polygon {
             }
             //Every edge has point1 and point2, we first make an equation out of them
             linearEquation newEquation = new linearEquation(edge.getPoint1().getX(), edge.getPoint1().getY(), edge.getPoint2().getX(), edge.getPoint2().getY());
-            //System.out.println("minx = " + edge.getPoint1().getX_coordinate() + " maxX = " + edge.getPoint2().getX_coordinate());
+            //System.out.println("minx = " + edge.getPoint1().getX()() + " maxX = " + edge.getPoint2().getX()());
             for(double i = minValue; i <= maxValue; i+=precision) {
                 //Here we will be getting the coordinates
                 //First rearrange the equation from Ax+By=C to y = (C - Ax) / B or x = (c - By) / A depending on the value we're trying to find
@@ -68,7 +68,7 @@ public abstract class Polygon {
                     System.out.println("Pending: ( " + i + ", " + yValue + ")");
                     boolean exists = false;
                     for(Coordinate point: setOfPerimeterCoordinates){
-                        if((point.getX_coordinate() == i) && (point.getY_coordinate() == yValue)){
+                        if((point.getX() == i) && (point.getY() == yValue)){
                             exists = true;
                         }
                     }
@@ -86,7 +86,7 @@ public abstract class Polygon {
                     System.out.println("Pending: ( " + xValue + ", " + i + ")");
                     boolean exists = false;
                     for(Coordinate point: setOfPerimeterCoordinates){
-                        if((point.getX_coordinate() == xValue) && (point.getY_coordinate() == i)){
+                        if((point.getX() == xValue) && (point.getY() == i)){
                             exists = true;
                         }
                     }
@@ -129,11 +129,11 @@ public abstract class Polygon {
             if (i != (coordinates.size() - 1)) {
                 Coordinate point1 = coordinates.get(i);
                 Coordinate point2 = coordinates.get(i + 1);
-                accumulator += abs(((point1.getX_coordinate() * point2.getY_coordinate()) - (point1.getY_coordinate() * point2.getX_coordinate())));
+                accumulator += abs(((point1.getX() * point2.getY()) - (point1.getY() * point2.getX())));
             }else{
                 Coordinate point2 = coordinates.get(0);
                 Coordinate point1 = coordinates.get(i);
-                accumulator += abs(((point1.getX_coordinate() * point2.getY_coordinate()) - (point1.getY_coordinate() * point2.getX_coordinate())));
+                accumulator += abs(((point1.getX() * point2.getY()) - (point1.getY() * point2.getX())));
             }
         }
         System.out.println("Area: " + accumulator/2);

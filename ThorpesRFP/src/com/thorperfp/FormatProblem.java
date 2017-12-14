@@ -60,7 +60,7 @@ public class FormatProblem {
 
             int c;
             for (c=0; c<s.size(); c++){
-                System.out.print("(" + s.get(c).getX_coordinate() + "," + s.get(c).getY_coordinate() + ")");
+                System.out.print("(" + s.get(c).getX() + "," + s.get(c).getY_coordinate() + ")");
             }
             System.out.println();
         }

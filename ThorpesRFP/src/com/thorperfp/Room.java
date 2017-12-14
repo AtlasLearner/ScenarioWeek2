@@ -52,8 +52,8 @@ public class Room extends Polygon{
                 point_two = coordinates.get(0);
             }
 
-            area += point_one.getX_coordinate() * point_two.getY_coordinate();
-            area -= point_one.getY_coordinate() * point_two.getX_coordinate();
+            area += point_one.getX() * point_two.getY();
+            area -= point_one.getY() * point_two.getX();
         }
 
         area /= 2;

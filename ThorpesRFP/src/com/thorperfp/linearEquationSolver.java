@@ -16,8 +16,8 @@ public class linearEquationSolver {
 
     public boolean solveEquations() {
         //Make the first equation in form Ax+By = C
-        linearEquation lineSeg1 = new linearEquation(point11.getX_coordinate(), point11.getY_coordinate(), point12.getX_coordinate(), point12.getY_coordinate());
-        linearEquation lineSeg2 = new linearEquation(point21.getX_coordinate(), point21.getY_coordinate(), point22.getX_coordinate(), point22.getY_coordinate());
+        linearEquation lineSeg1 = new linearEquation(point11.getX(), point11.getY(), point12.getX(), point12.getY());
+        linearEquation lineSeg2 = new linearEquation(point21.getX(), point21.getY(), point22.getX(), point22.getY());
 
         double det = lineSeg1.getA() * lineSeg2.getB() - lineSeg2.getA() * lineSeg1.getB();
         if (det == 0) {
@@ -36,33 +36,33 @@ public class linearEquationSolver {
             double minY2;
             double maxY2;
 
-            if(point11.getX_coordinate() > point12.getX_coordinate()){
-                minX = point12.getX_coordinate();
-                maxX = point11.getX_coordinate();
+            if(point11.getX() > point12.getX()){
+                minX = point12.getX();
+                maxX = point11.getX();
             }else{
-                minX = point11.getX_coordinate();
-                maxX = point12.getX_coordinate();
+                minX = point11.getX();
+                maxX = point12.getX();
             }
-            if(point11.getY_coordinate() > point12.getY_coordinate()){
-                minY = point12.getY_coordinate();
-                maxY = point11.getY_coordinate();
+            if(point11.getY() > point12.getY()){
+                minY = point12.getY();
+                maxY = point11.getY();
             }else{
-                minY = point11.getY_coordinate();
-                maxY = point12.getY_coordinate();
+                minY = point11.getY();
+                maxY = point12.getY();
             }
-            if(point21.getX_coordinate() > point22.getX_coordinate()){
-                minX2 = point22.getX_coordinate();
-                maxX2 = point21.getX_coordinate();
+            if(point21.getX() > point22.getX()){
+                minX2 = point22.getX();
+                maxX2 = point21.getX();
             }else{
-                minX2 = point21.getX_coordinate();
-                maxX2 = point22.getX_coordinate();
+                minX2 = point21.getX();
+                maxX2 = point22.getX();
             }
-            if(point21.getY_coordinate() > point22.getY_coordinate()){
-                minY2 = point22.getY_coordinate();
-                maxY2 = point21.getY_coordinate();
+            if(point21.getY() > point22.getY()){
+                minY2 = point22.getY();
+                maxY2 = point21.getY();
             }else{
-                minY2 = point21.getY_coordinate();
-                maxY2 = point22.getY_coordinate();
+                minY2 = point21.getY();
+                maxY2 = point22.getY();
             }
 
             //To be an intersecting line, you must be in the both the bounds of x & y of one line, an the bounds of x & y of the other line, return true

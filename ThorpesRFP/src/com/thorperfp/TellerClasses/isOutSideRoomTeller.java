@@ -30,20 +30,20 @@ public class isOutSideRoomTeller {
     }
 
     private double getMaxX (ArrayList<Coordinate> points){
-        double largestPoint = points.get(0).getX_coordinate();
+        double largestPoint = points.get(0).getX();
         for(Coordinate pointers : points) {
-            if(largestPoint < pointers.getX_coordinate()){
-                largestPoint = pointers.getX_coordinate();
+            if(largestPoint < pointers.getX()){
+                largestPoint = pointers.getX();
             }
         }
         return largestPoint;
     }
 
     private double getMaxY (ArrayList<Coordinate> points){
-        double largestPoint = points.get(0).getY_coordinate();
+        double largestPoint = points.get(0).getY();
         for(Coordinate pointers : points) {
-            if(largestPoint < pointers.getY_coordinate()){
-                largestPoint = pointers.getY_coordinate();
+            if(largestPoint < pointers.getY()){
+                largestPoint = pointers.getY();
             }
         }
         return largestPoint;
