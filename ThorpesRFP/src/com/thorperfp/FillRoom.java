@@ -1,11 +1,5 @@
 package com.thorperfp;
 
-import sun.security.provider.SHA;
-
-import java.io.BufferedReader;
-import java.io.DataInputStream;
-import java.io.FileInputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class FillRoom {
@@ -13,9 +7,9 @@ public class FillRoom {
     private final ArrayList<Shape> shapes;
     private final Room room;
 
-    public FillRoom (Room roomVar, ArrayList<Shape> shapesVar){
+    public FillRoom (Room roomVar, ArrayList<Shape> shapeVar){
         this.room = roomVar;
-        this.shapes = shapesVar;
+        this.shapes = shapeVar;
     }
 
     public void startFilling (){
@@ -38,7 +32,7 @@ public class FillRoom {
     public void doSomething (Shape shape){System.out.println("hello world");}
 
 
-    public void rotateShape(Shape s,double q){
+    public void rotateShape(Shape s, double q){
 
         double x;
         double y;
