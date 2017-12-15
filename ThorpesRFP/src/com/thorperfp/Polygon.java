@@ -19,7 +19,7 @@ public abstract class Polygon {
         this.coordinates = coordinates;
     }
 
-    public ArrayList<Coordinate> getPerimeterCoordinates(int precision) {
+    public ArrayList<Coordinate> getPerimeterCoordinates(double precision) {
         //Where precision is the number of decimal places that we would like to check
         //Currently we will stick to using precision as 1 where we increment in integer values.
 

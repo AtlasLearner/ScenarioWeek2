@@ -72,18 +72,19 @@ public class linearEquationSolver {
             //check the first line
             //First fault or misconception found - here should be && or ||
 
-            System.out.println("Crossing Analysis: minX: " + minX + "maxX: " + maxX + "minY " + minY + "maxY: " + maxY);
-            System.out.println("Crossing Analysis: minX2 :" + minX2 + "maxX: " + maxX2 + "minY2 " + minY2 + "maxY2: " + maxY2);
+            System.out.println("Crossing Analysis: minX: " + minX + " maxX: " + maxX + " minY " + minY + " maxY: " + maxY);
+            System.out.println("Crossing Analysis: minX2 :" + minX2 + " maxX: " + maxX2 + " minY2 " + minY2 + " maxY2: " + maxY2);
             System.out.println("Crossing at: x: " + xCrossingPoint + " y: " + yCrossingPoint);
+
             if(((xCrossingPoint > minX) && (xCrossingPoint < maxX)) && ((yCrossingPoint > minY) && (yCrossingPoint < maxY))){
                 //then it must be in the bounds of the second line
                 if(((xCrossingPoint > minX2) && (xCrossingPoint < maxX2)) && ((yCrossingPoint > minY2) && yCrossingPoint < maxY2)){
-
+                    System.out.println("I have crossed");
                     return true;
                 }
             }
             if(!(comparingShape instanceof Room)) {
-                System.out.println("I am not in a room");
+                //System.out.println("I am not in a room");
                 if (((xCrossingPoint == minX) && (yCrossingPoint == minY)) || ((xCrossingPoint == maxX) && yCrossingPoint == maxY)) {
                     //Try to find perimeter coordinates inside the existing shape.
                     ArrayList<Coordinate> periPoint = placingShape.getPerimeterCoordinates(1);
@@ -94,7 +95,7 @@ public class linearEquationSolver {
                     double minPeriY = comparingShape.getMinY();
                     System.out.println("MaxX: " +  maxPeriX + "MaxY: " + maxPeriY);
                     for (Coordinate point : periPoint) {
-                        if (((point.getX() > minPeriX) && (point.getX() < maxPeriX)) && ((point.getY() > minPeriY) && (point.getY() < maxPeriY))) {
+                        if (((point.getX() >= minPeriX) && (point.getX() <= maxPeriX)) && ((point.getY() >= minPeriY) && (point.getY() <= maxPeriY))) {
                             periPointsFound++;
                         }
                     }

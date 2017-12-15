@@ -44,7 +44,7 @@ public class FillRoomTest {
         ShapesToBePlaced.add(new Shape(10, trianglePts));
         ShapesToBePlaced.add(new Shape(10, ssquarePts));
 
-        FillRoom fillRoomTest = new FillRoom(testRoom, ShapesToBePlaced);
+        FillRoom fillRoomTest = new FillRoom(testRoom, ShapesToBePlaced, 1);
         assertThat(fillRoomTest.fillTheRoom().size(), is(3));
 
     }
@@ -60,12 +60,43 @@ public class FillRoomTest {
 
     @Test
     public void debuggingAlgorithm1(){
-        // (0.0,0.0), (3.0,0.0), (3.0,3.0), (0.0,3.0); (3.0,0.0), (5.0,0.0), (5.0,2.0), (3.0,2.0); (3.0,0.0), (5.0,0.0), (5.0,2.0), (3.0,2.0);
-        // (4.0,0.0), (7.0,0.0), (7.0,5.0), (1.0,5.0); (7.0,0.0), (8.5,0.0), (8.5,1.4999999999999998), (7.0,1.5)
-        ArrayList<Coordinate> s1 = new ArrayList<>();
-        ArrayList<Coordinate> s2 = new ArrayList<>();
-        ArrayList<Coordinate> s3 = new ArrayList<>();
-        ArrayList<Coordinate> s4 = new ArrayList<>();
-        ArrayList<Coordinate> s5 = new ArrayList<>();
+        //Make example: ArrayList<Polygon> ShapesToBePlaced, A room,
+        Coordinate roomPt1 = new Coordinate((double)0,(double)0);
+        Coordinate roomPt2 = new Coordinate((double)0,(double)10);
+        Coordinate roomPt3 = new Coordinate((double)10, (double)10);
+        Coordinate roomPt4 = new Coordinate((double)10, (double)0);
+        ArrayList<Coordinate> roomPts = new ArrayList<>();
+        roomPts.add(roomPt1);
+        roomPts.add(roomPt2);
+        roomPts.add(roomPt3);
+        roomPts.add(roomPt4);
+
+        Room testRoom = new Room(roomPts);
+
+        //9:(0, 0), (3, 0), (3, 3), (0, 3);
+        // 4:(0, 0), (2, 0), (2, 2), (0, 2);
+        // 4:(0, 0), (2, 0), (2, 2), (0, 2);
+        // 23:(0, 0), (3, 0), (3, 5), (-3, 5);
+        // 2:(0, 0), (1.5, 0), (1.5, 1.4999999999999998), (0, 1.5)
+        double[] l1 = {0,0,3,0,3,3,0,3};
+        double[] l2 = {0,0,2,0,2,2,0,2};
+        double[] l3 = {0,0,2,0,2,2,0,2};
+        double[] l4 = {0,0,3,0,3,5,-3,5};
+        double[] l5 = {0,0,1.5,0,1.5,1.4999999999999998,0,1.5};
+        Shape s1 = new Shape(10, l1);
+        Shape s2 = new Shape(10, l2);
+        Shape s3 = new Shape(10, l3);
+        Shape s4 = new Shape(10, l4);
+        Shape s5 = new Shape(10, l5);
+        ArrayList<Polygon> shapes = new ArrayList<>();
+        shapes.add(s1);
+        shapes.add(s2);
+        shapes.add(s3);
+        shapes.add(s4);
+        shapes.add(s5);
+
+        FillRoom roomFiller = new FillRoom(testRoom, shapes, 1);
+        OutFormatter answer = new OutFormatter(roomFiller.fillTheRoom());
+        answer.printAnswer();
     }
 }

@@ -14,10 +14,12 @@ public class FillRoom {
     private ArrayList<Coordinate> perimeterCoordinates = new ArrayList<Coordinate>();
     private final ArrayList<Polygon> toBePlaced;
     private final Room room;
+    private double precision;
 
-    public FillRoom (Room roomVar, ArrayList<Polygon> toBePlaced){
+    public FillRoom (Room roomVar, ArrayList<Polygon> toBePlaced, double precision){
         this.room = roomVar;
         this.toBePlaced = toBePlaced;
+        this.precision = precision;
     }
 
     public ArrayList<Polygon> fillTheRoom(){
@@ -30,7 +32,7 @@ public class FillRoom {
         ShapesToCheck.add(room);
         for(Polygon shape : ShapesToCheck){
             //After the line below all perimeters of room will be stored into the arrayList
-            perimeterCoordinates.addAll(shape.getPerimeterCoordinates(1));
+            perimeterCoordinates.addAll(shape.getPerimeterCoordinates(this.precision));
     }
         for(Polygon shape : toBePlaced){
             boolean shapePlaced = false;
@@ -51,16 +53,15 @@ public class FillRoom {
                 IntersectTeller teller = new IntersectTeller(ShapesToCheck, tempShape);
                 InAnotherShapeTeller teller2 = new InAnotherShapeTeller(tempShape, ShapesToCheck);
                 isOutSideRoomTeller teller3 = new isOutSideRoomTeller(room, tempShape);
+                //System.out.println("Placing Conditions: intersecting: " + teller.isThereAnIntersection() + " inAnotherShape: " + teller2.isShapeOnTopOfAnotherShape() + " isOutsideRoomTeller: " + teller3.isTheShapeOutsideTheRoom());
                 if(!teller.isThereAnIntersection() && !teller2.isShapeOnTopOfAnotherShape() && !teller3.isTheShapeOutsideTheRoom()){
-                    //I then place the shape
-                    //set the shape to be placed coordinates to new coordinates
                     shape.setCoordinates(tempShape.getCoordinates());
                     ShapesToCheck.add(shape);
-                    perimeterCoordinates.addAll(shape.getPerimeterCoordinates(1));
+                    perimeterCoordinates.addAll(shape.getPerimeterCoordinates(this.precision));
                     System.out.println("Shape has been placed!");
+                    shape.printCoords();
                     shapePlaced = true;
                     break;
-
                 }
             }
             if(!shapePlaced){

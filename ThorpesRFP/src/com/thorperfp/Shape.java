@@ -8,8 +8,8 @@ import java.util.ArrayList;
 public class Shape extends Polygon{
 
     private boolean isRoom = false;
-    private Integer unitCost;
-    private double cost;
+    private Integer unitCost = 0;
+    private double cost = 0;
 
     //Constructor for testing purposes
     public Shape(int unitCost, ArrayList<Coordinate> coordinates){
@@ -20,8 +20,12 @@ public class Shape extends Polygon{
     public Shape(int unitCost, double[] listOfCoordinates){
         ArrayList<Coordinate> tempCo = new ArrayList<>();
         for(int i = 0; i < (listOfCoordinates.length/2); i++){
-            tempCo.add(new Coordinate(listOfCoordinates[i]))
+            tempCo.add(new Coordinate(listOfCoordinates[2*i], listOfCoordinates[(2*i)+1]));
         }
+
+        this.cost = unitCost;
+        this.coordinates = tempCo;
+        System.out.println(this.coordinates.size());
     }
 
     public Shape(String s){

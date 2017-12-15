@@ -4,6 +4,7 @@ import com.thorperfp.Coordinate;
 import com.thorperfp.Polygon;
 import com.thorperfp.Shape;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class InAnotherShapeTeller {
@@ -29,9 +30,6 @@ public class InAnotherShapeTeller {
             double checkingShapeMinY = getSmallestY(toBeCheckedAgainst.get(i).getCoordinates());
             double checkingShapeMaxX = getLargestX(toBeCheckedAgainst.get(i).getCoordinates());
             double checkingShapeMaxY = getLargestY(toBeCheckedAgainst.get(i).getCoordinates());
-            System.out.println("sMaxX: " + shapeMaxX + " sMinX: " + shapeMinX + " sMaxY: " + shapeMaxY + " sMinY: " + shapeMinY);
-            System.out.println("cShMaxX: " + checkingShapeMaxX + " cShMinX: " + checkingShapeMinX + " cShMaxY: " + checkingShapeMaxY + " cShMinY: " + checkingShapeMinY);
-
             //Check if the placing shape is inside another
             int foundInsideOfAnother = 0;
 
@@ -46,21 +44,23 @@ public class InAnotherShapeTeller {
             int foundInsideOfItself = 0;
 
             for(Coordinate points: toBeCheckedAgainst.get(i).getCoordinates()){
-                if((points.getX() <= shapeMaxX) && (points.getX() >= shapeMinX)){
-                    if((points.getY() <= shapeMaxY) && (points.getY() >= shapeMinY)){
+                //This method returns -1 if the BigDecimal is less than val, 1 if the BigDecimal is greater than val and 0 if the BigDecimal is equal to val
+                BigDecimal bigD1 = new BigDecimal(points.getX());
+                BigDecimal bigD2 = new BigDecimal(points.getY());
+                BigDecimal bigSD1 = new BigDecimal(shapeMaxX);
+                BigDecimal bigSD2 = new BigDecimal(shapeMinX);
+                if((bigD1.compareTo(bigSD1) < 1) && (bigD1.compareTo(bigSD2) > -1)){
+                    bigSD1 = new BigDecimal(shapeMaxY);
+                    bigSD2 = new BigDecimal(shapeMinY);
+                    if((bigD2.compareTo(bigSD1) < 1) && (bigD2.compareTo(bigSD2) > -1)){
+
                         foundInsideOfItself++;
                     }
                 }
             }
             if((foundInsideOfAnother == shape.getCoordinates().size()) || (foundInsideOfItself == toBeCheckedAgainst.get(i).getCoordinates().size())){
-                System.out.println("I am in a shape! or a shape is inside me!");
                 return true;
-
-            }else{
-                return false;
             }
-
-
 
         }
 

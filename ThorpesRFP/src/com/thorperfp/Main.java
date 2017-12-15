@@ -43,7 +43,7 @@ public class Main {
         formatter.getAllObjectsCoords();
 
 
-        FillRoom fill = new FillRoom(formatter.getRoom() , formatter.getShapes());
+        FillRoom fill = new FillRoom(formatter.getRoom() , formatter.getShapes(), 1);
         OutFormatter answer = new OutFormatter(fill.fillTheRoom());
         answer.printAnswer();
     }
