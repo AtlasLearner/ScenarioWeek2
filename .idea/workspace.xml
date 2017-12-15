@@ -2,21 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3c1fded-8d44-4c45-bfbc-f582ba8a477c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/Coordinate.class" afterPath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/Coordinate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/FillRoom.class" afterPath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/FillRoom.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/FormatProblem.class" afterPath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/FormatProblem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/Main.class" afterPath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/Polygon.class" afterPath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/Polygon.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/Room.class" afterPath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/Room.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/Shape.class" afterPath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/Shape.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/Tests/FillRoomTest.class" afterPath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/Tests/FillRoomTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/Tests/IntersectTellerTest.class" afterPath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/Tests/IntersectTellerTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/Tests/RoomTest.class" afterPath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/Tests/RoomTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/Tests/linearEquationSolverTest.class" afterPath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/Tests/linearEquationSolverTest.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ThorpesRFP/out/production/ScenarioWeek2/com/thorperfp/OutFormatter.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RFP-Visualiser/sketch.js" afterPath="$PROJECT_DIR$/RFP-Visualiser/sketch.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Coordinate.java" afterPath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Coordinate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FillRoom.java" afterPath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FillRoom.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FormatProblem.java" afterPath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FormatProblem.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Main.java" afterPath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/OutFormatter.java" afterPath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/OutFormatter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Polygon.java" afterPath="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Polygon.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mallorca1.txt" afterPath="$PROJECT_DIR$/mallorca1.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/ThorpesRFP/out/" />
@@ -29,60 +23,74 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
-      <file leaf-file-name="Room.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Room.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="66" column="5" lean-forward="false" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
-              <folding>
-                <element signature="e#1909#1910#0" expanded="true" />
-                <element signature="e#1936#1937#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FormatProblem.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FormatProblem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="50" column="53" lean-forward="false" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
+            <state relative-caret-position="510">
+              <caret line="108" column="26" lean-forward="false" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#875#883#0" expanded="true" />
+                <element signature="e#1090#1091#0" expanded="true" />
+                <element signature="e#1140#1141#0" expanded="true" />
+                <element signature="e#3738#3739#0" expanded="true" />
+                <element signature="e#3772#3773#0" expanded="true" />
+                <element signature="e#3799#3800#0" expanded="true" />
+                <element signature="e#3831#3832#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OutFormatter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/OutFormatter.java">
+      <file leaf-file-name="sketch.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RFP-Visualiser/sketch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="38" column="57" lean-forward="false" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
+            <state relative-caret-position="578">
+              <caret line="29" column="8850" lean-forward="false" selection-start-line="29" selection-start-column="8850" selection-end-line="29" selection-end-column="8850" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="problems.rfp.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ThorpesRFP/problems.rfp.txt">
+      <file leaf-file-name="linearEquation.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/linearEquation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="72" lean-forward="false" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="72" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="39" column="74" lean-forward="false" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
+            <state relative-caret-position="646">
+              <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#271#279#0" expanded="true" />
+                <element signature="e#423#424#0" expanded="true" />
+                <element signature="e#447#448#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lineSegment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/lineSegment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="linearEquationSolver.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/linearEquationSolver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1360">
+              <caret line="49" column="46" lean-forward="false" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Coordinate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Coordinate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,8 +98,8 @@
       <file leaf-file-name="Polygon.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Polygon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="70" column="33" lean-forward="false" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
+            <state relative-caret-position="458">
+              <caret line="34" column="88" lean-forward="false" selection-start-line="34" selection-start-column="88" selection-end-line="34" selection-end-column="88" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,45 +110,37 @@
       <file leaf-file-name="FillRoom.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FillRoom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="102" column="36" lean-forward="false" selection-start-line="102" selection-start-column="36" selection-end-line="102" selection-end-column="36" />
+            <state relative-caret-position="4148">
+              <caret line="131" column="43" lean-forward="false" selection-start-line="131" selection-start-column="43" selection-end-line="131" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#341#350#0" expanded="true" />
+                <element signature="e#424#436#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="problems.rfp.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/problems.rfp.txt">
+      <file leaf-file-name="OutFormatter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/OutFormatter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Shape.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Shape.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="99" column="39" lean-forward="false" selection-start-line="99" selection-start-column="39" selection-end-line="99" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Coordinate.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Coordinate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="3" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+            <state relative-caret-position="850">
+              <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
               <folding>
-                <element signature="e#307#308#0" expanded="true" />
-                <element signature="e#342#343#0" expanded="true" />
-                <element signature="e#381#382#0" expanded="true" />
-                <element signature="e#416#417#0" expanded="true" />
+                <marker date="1513308393921" expanded="true" signature="274:713" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="537">
+              <caret line="47" column="44" lean-forward="true" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#271#279#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -191,7 +191,6 @@
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Tests/linearEquationSolverTest.java" />
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Shapes.java" />
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/TellerClasses/IntersectTeller.java" />
-        <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/OutFormatter.java" />
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Tests/IntersectTellerTest.java" />
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/TellerClasses/InAnotherShapeTeller.java" />
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/TellerClasses/isOutSideRoomTeller.java" />
@@ -199,17 +198,22 @@
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Room.java" />
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Tests/FillRoomTest.java" />
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Tests/RoomTest.java" />
+        <option value="$PROJECT_DIR$/mallorca1.txt" />
+        <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Main.java" />
+        <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FormatProblem.java" />
+        <option value="$PROJECT_DIR$/RFP-Visualiser/sketch.js" />
+        <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Coordinate.java" />
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Polygon.java" />
         <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FillRoom.java" />
-        <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FormatProblem.java" />
-        <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Coordinate.java" />
-        <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Main.java" />
+        <option value="$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/OutFormatter.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="3224" />
+    <option name="height" value="1824" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -227,13 +231,20 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="ScenarioWeek2" type="b2602c69:ProjectViewProjectNode" />
               <item name="ScenarioWeek2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ScenarioWeek2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScenarioWeek2" type="462c0819:PsiDirectoryNode" />
+              <item name="RFP-Visualiser" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ScenarioWeek2" type="b2602c69:ProjectViewProjectNode" />
@@ -257,8 +268,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -603,23 +612,24 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="-12" y="-12" width="3224" height="1824" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19257222" sideWeight="0.48800835" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1942225" sideWeight="0.4975" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32738718" sideWeight="0.5078125" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32821143" sideWeight="0.1178125" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32737276" sideWeight="0.4921875" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32821143" sideWeight="0.8821875" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944068" sideWeight="0.49875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22132471" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843652" sideWeight="0.49217936" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1459375" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944068" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -627,10 +637,31 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32738718" sideWeight="0.5078125" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19257222" sideWeight="0.48800835" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32737276" sideWeight="0.4921875" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22132471" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843652" sideWeight="0.49217936" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -683,48 +714,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/OutFormatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="38" column="57" lean-forward="false" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding>
-            <element signature="e#1909#1910#0" expanded="true" />
-            <element signature="e#1936#1937#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Coordinate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="25" column="60" lean-forward="true" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
-          <folding>
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Polygon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Tests/RoomTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="569">
@@ -759,6 +748,13 @@
           <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#875#883#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1140#1141#0" expanded="true" />
+            <element signature="e#3738#3739#0" expanded="true" />
+            <element signature="e#3772#3773#0" expanded="true" />
+            <element signature="e#3799#3800#0" expanded="true" />
+            <element signature="e#3831#3832#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -799,12 +795,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding>
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -844,6 +835,13 @@
           <caret line="62" column="32" lean-forward="false" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#875#883#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1140#1141#0" expanded="true" />
+            <element signature="e#3738#3739#0" expanded="true" />
+            <element signature="e#3772#3773#0" expanded="true" />
+            <element signature="e#3799#3800#0" expanded="true" />
+            <element signature="e#3831#3832#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -854,6 +852,8 @@
           <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#341#350#0" expanded="true" />
+            <element signature="e#424#436#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -875,6 +875,13 @@
           <caret line="62" column="32" lean-forward="false" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#875#883#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1140#1141#0" expanded="true" />
+            <element signature="e#3738#3739#0" expanded="true" />
+            <element signature="e#3772#3773#0" expanded="true" />
+            <element signature="e#3799#3800#0" expanded="true" />
+            <element signature="e#3831#3832#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -916,12 +923,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding>
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -931,6 +933,8 @@
           <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#341#350#0" expanded="true" />
+            <element signature="e#424#436#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -952,6 +956,13 @@
           <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#875#883#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1140#1141#0" expanded="true" />
+            <element signature="e#3738#3739#0" expanded="true" />
+            <element signature="e#3772#3773#0" expanded="true" />
+            <element signature="e#3799#3800#0" expanded="true" />
+            <element signature="e#3831#3832#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -971,14 +982,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#271#279#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/problems.rfp.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1041,27 +1044,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/linearEquationSolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="46" lean-forward="false" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/linearEquation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/lineSegment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Tests/RoomTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="569">
@@ -1079,44 +1061,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FillRoom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="102" column="36" lean-forward="false" selection-start-line="102" selection-start-column="36" selection-end-line="102" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FormatProblem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="50" column="53" lean-forward="false" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/OutFormatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="38" column="57" lean-forward="false" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Polygon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="70" column="33" lean-forward="false" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Room.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -1130,32 +1074,143 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Shape.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
+        <state relative-caret-position="3094">
           <caret line="99" column="39" lean-forward="false" selection-start-line="99" selection-start-column="39" selection-end-line="99" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/problems.rfp.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="0" column="566" lean-forward="false" selection-start-line="0" selection-start-column="566" selection-end-line="0" selection-end-column="566" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RFP-Visualiser/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mallorca1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="5" column="98" lean-forward="false" selection-start-line="5" selection-start-column="98" selection-end-line="5" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RFP-Visualiser/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="47" column="44" lean-forward="true" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#271#279#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RFP-Visualiser/sketch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="29" column="8850" lean-forward="false" selection-start-line="29" selection-start-column="8850" selection-end-line="29" selection-end-column="8850" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Coordinate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="3" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        <state relative-caret-position="612">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Polygon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="34" column="88" lean-forward="false" selection-start-line="34" selection-start-column="88" selection-end-line="34" selection-end-column="88" />
           <folding>
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/Main.java">
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FormatProblem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="39" column="74" lean-forward="false" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
+        <state relative-caret-position="510">
+          <caret line="108" column="26" lean-forward="false" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#271#279#0" expanded="true" />
+            <element signature="e#875#883#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1140#1141#0" expanded="true" />
+            <element signature="e#3738#3739#0" expanded="true" />
+            <element signature="e#3772#3773#0" expanded="true" />
+            <element signature="e#3799#3800#0" expanded="true" />
+            <element signature="e#3831#3832#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/OutFormatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+          <folding>
+            <marker date="1513308393921" expanded="true" signature="274:713" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/lineSegment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/linearEquationSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="49" column="46" lean-forward="false" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/FillRoom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4148">
+          <caret line="131" column="43" lean-forward="false" selection-start-line="131" selection-start-column="43" selection-end-line="131" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#341#350#0" expanded="true" />
+            <element signature="e#424#436#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThorpesRFP/src/com/thorperfp/linearEquation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="e#423#424#0" expanded="true" />
+            <element signature="e#447#448#0" expanded="true" />
           </folding>
         </state>
       </provider>

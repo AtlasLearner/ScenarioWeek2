@@ -128,8 +128,8 @@ public class FillRoom {
 
 
 
-            x = point_one.getX();
-            y = point_one.getY();
+            x = point_one.getX_coordinate();
+            y = point_one.getY_coordinate();
 
             double tempx = x;
 

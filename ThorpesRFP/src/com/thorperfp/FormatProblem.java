@@ -4,6 +4,7 @@ import sun.security.tools.policytool.PolicyTool;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 public class FormatProblem {
 //    private String string;
@@ -74,6 +75,43 @@ public class FormatProblem {
             System.out.println();
         }
     }
+    public void displayShapesVisualiser(){
+        Iterator<Polygon> iterator = shapes.iterator();
+        double c =1;
+        while (iterator.hasNext()){
+//            Polygon currentShape = iterator.next();
+//            ArrayList<Coordinate> s = currentShape.getCoordinates();
+//
+//            int c;
+//            int i;
+//            for (c=0,i=100; c<s.size(); c++,i+=10){
+//                System.out.print("(" + (s.get(c).getX_coordinate() + i) + "," + s.get(c).getY_coordinate() + ")");
+//            }
+//            System.out.print(";");
+                String shape_coordinate_string = "";
+                List<Coordinate> shape_coordinates = iterator.next().getCoordinates();
+                int i;
+
+                for (i = 0; i < shape_coordinates.size(); i++){
+                    Coordinate point = shape_coordinates.get(i);
+                    String point_coordinate_string = "";
+
+                    double x_coordinate = point.getX_coordinate();
+                    double y_coordinate = point.getY_coordinate();
+
+                    point_coordinate_string += "(" + (x_coordinate + c) + "," + y_coordinate + ")";
+                    shape_coordinate_string += point_coordinate_string;
+
+                    if (i != (shape_coordinates.size() - 1)){
+                        shape_coordinate_string += ", ";
+                    }
+                }
+                c = c+ 0.6;
+
+                System.out.print(shape_coordinate_string + ("; "));
+        }
+
+        }
     public ArrayList<Polygon> getShapes(){
         return this.shapes;
     }

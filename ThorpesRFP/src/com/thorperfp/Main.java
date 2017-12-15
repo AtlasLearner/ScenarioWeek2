@@ -45,6 +45,7 @@ public class Main {
         formatter.getAllObjectsCosts();
         System.out.println();
         formatter.getAllObjectsCoords();
+        formatter.displayShapesVisualiser();
 
 
         //FillRoom fill = new FillRoom(formatter.getRoom() , formatter.getShapes());

@@ -5,24 +5,24 @@ package com.thorperfp;
  */
 public class Coordinate {
 
-    private Double x_coordinate;
-    private Double y_coordinate;
+    private double x_coordinate;
+    private double y_coordinate;
 
     public Coordinate(double x, double y){
         this.x_coordinate = x;
         this.y_coordinate = y;
     }
 
-    public Double getX_coordinate() {
+    public double getX_coordinate() {
         return x_coordinate;
     }
 
-    public Double getY_coordinate() {
+    public double getY_coordinate() {
         return y_coordinate;
     }
 
-    public double getX(){return x_coordinate.doubleValue();}
+    //public double getX(){return x_coordinate.doubleValue();}
 
-    public double getY(){return y_coordinate.doubleValue();}
+    //public double getY(){return y_coordinate.doubleValue();}
 
 }

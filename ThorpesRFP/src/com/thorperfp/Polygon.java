@@ -31,27 +31,27 @@ public abstract class Polygon {
             double minValue;
             double maxValue;
             char weAreFinding;
-            if(edge.getPoint1().getX() == edge.getPoint2().getX()){
-                if(edge.getPoint1().getY() > edge.getPoint2().getY()) {
-                    minValue = edge.getPoint2().getY();;
-                    maxValue = edge.getPoint1().getY();;
+            if(edge.getPoint1().getX_coordinate() == edge.getPoint2().getX_coordinate()){
+                if(edge.getPoint1().getY_coordinate() > edge.getPoint2().getY_coordinate()) {
+                    minValue = edge.getPoint2().getY_coordinate();;
+                    maxValue = edge.getPoint1().getY_coordinate();;
                 }else{
-                    minValue = edge.getPoint1().getY();;
-                    maxValue = edge.getPoint2().getY();;
+                    minValue = edge.getPoint1().getY_coordinate();;
+                    maxValue = edge.getPoint2().getY_coordinate();;
                 }
                 weAreFinding = 'x';
             }else{
-                if(edge.getPoint1().getX() > edge.getPoint2().getX()) {
-                    minValue = edge.getPoint2().getX();
-                    maxValue = edge.getPoint1().getX();
+                if(edge.getPoint1().getX_coordinate() > edge.getPoint2().getX_coordinate()) {
+                    minValue = edge.getPoint2().getX_coordinate();
+                    maxValue = edge.getPoint1().getX_coordinate();
                 }else{
-                    minValue = edge.getPoint1().getX();
-                    maxValue = edge.getPoint2().getX();
+                    minValue = edge.getPoint1().getX_coordinate();
+                    maxValue = edge.getPoint2().getX_coordinate();
                 }
                 weAreFinding = 'y';
             }
             //Every edge has point1 and point2, we first make an equation out of them
-            linearEquation newEquation = new linearEquation(edge.getPoint1().getX(), edge.getPoint1().getY(), edge.getPoint2().getX(), edge.getPoint2().getY());
+            linearEquation newEquation = new linearEquation(edge.getPoint1().getX_coordinate(), edge.getPoint1().getY_coordinate(), edge.getPoint2().getX_coordinate(), edge.getPoint2().getY_coordinate());
             //System.out.println("minx = " + edge.getPoint1().getX_coordinate() + " maxX = " + edge.getPoint2().getX_coordinate());
             for(double i = minValue; i <= maxValue; i+=precision) {
                 //Here we will be getting the coordinates
