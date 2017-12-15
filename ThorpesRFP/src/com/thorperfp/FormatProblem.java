@@ -48,6 +48,15 @@ public class FormatProblem {
 
         while (iterator.hasNext()){
             Polygon currentShape = iterator.next();
+            System.out.println(currentShape.getArea());
+        }
+    }
+
+    public void getAllObjectsCosts(){ //temp method
+        Iterator<Polygon> iterator = shapes.iterator();
+
+        while (iterator.hasNext()){
+            Polygon currentShape = iterator.next();
             System.out.println(currentShape.getArea() * currentShape.getUnitCost());
         }
     }

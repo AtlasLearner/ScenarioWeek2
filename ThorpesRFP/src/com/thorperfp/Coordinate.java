@@ -8,7 +8,7 @@ public class Coordinate {
     private Double x_coordinate;
     private Double y_coordinate;
 
-    public Coordinate(Double x, Double y){
+    public Coordinate(double x, double y){
         this.x_coordinate = x;
         this.y_coordinate = y;
     }

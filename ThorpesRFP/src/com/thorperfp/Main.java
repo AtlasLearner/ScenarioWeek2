@@ -35,17 +35,20 @@ public class Main {
             System.err.println("Error: " + e.getMessage());
         }
 
+        System.out.println(problemInstances.get(3));
 
-
-        FormatProblem formatter = new FormatProblem(problemInstances.get(0));
+        FormatProblem formatter = new FormatProblem(problemInstances.get(3));
         formatter.getRoomArea();
         System.out.println();
         formatter.getAllObjectsAreas();
+        System.out.println();
+        formatter.getAllObjectsCosts();
+        System.out.println();
         formatter.getAllObjectsCoords();
 
 
-        FillRoom fill = new FillRoom(formatter.getRoom() , formatter.getShapes());
-        fill.startFilling();
+        //FillRoom fill = new FillRoom(formatter.getRoom() , formatter.getShapes());
+        //fill.startFilling();
     }
 
 }
