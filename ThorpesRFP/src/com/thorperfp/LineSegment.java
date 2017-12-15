@@ -1,11 +1,11 @@
 package com.thorperfp;
 
-public class lineSegment {
+public class LineSegment {
 
     private Coordinate point1;
     private Coordinate point2;
 
-    public lineSegment(Coordinate point1, Coordinate point2){
+    public LineSegment(Coordinate point1, Coordinate point2){
         this.point1 = point1;
         this.point2 = point2;
     }

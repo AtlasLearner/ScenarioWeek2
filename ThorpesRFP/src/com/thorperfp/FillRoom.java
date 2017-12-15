@@ -4,6 +4,7 @@ import com.thorperfp.TellerClasses.InAnotherShapeTeller;
 import com.thorperfp.TellerClasses.IntersectTeller;
 import com.thorperfp.TellerClasses.isOutSideRoomTeller;
 
+import java.awt.geom.Line2D;
 import java.util.ArrayList;
 
 import static java.lang.Math.round;
@@ -150,4 +151,11 @@ public class FillRoom {
         s.setCoordinates(temp);
 
     }
+    public boolean hasIntersect(LineSegment lineA, LineSegment lineB){
+        Line2D line1 = new Line2D.Double(lineA.getPoint1().getX_coordinate(), lineA.getPoint1().getY_coordinate(), lineA.getPoint2().getX_coordinate(), lineA.getPoint2().getY_coordinate());
+        Line2D line2 = new Line2D.Double(lineB.getPoint1().getX_coordinate(), lineB.getPoint1().getY_coordinate(), lineB.getPoint2().getX_coordinate(), lineB.getPoint2().getY_coordinate());
+        boolean result = line2.intersectsLine(line1);
+        return result;
+    }
+
 }

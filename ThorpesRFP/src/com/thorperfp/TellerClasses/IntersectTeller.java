@@ -30,12 +30,12 @@ public class IntersectTeller {
 
          */
         //Add room to the start of the array of toCheck
-        ArrayList<lineSegment> toBePlacedEdges = toBePlaced.lineSegmentSeparator();
+        ArrayList<LineSegment> toBePlacedEdges = toBePlaced.lineSegmentSeparator();
         boolean hasIntersect = false;
         for(Polygon shape : toCheck) {
-            ArrayList<lineSegment> comparingEdges = shape.lineSegmentSeparator();
-            for (lineSegment edge : toBePlacedEdges) {
-                for (lineSegment ComparingEdge : comparingEdges) {
+            ArrayList<LineSegment> comparingEdges = shape.lineSegmentSeparator();
+            for (LineSegment edge : toBePlacedEdges) {
+                for (LineSegment ComparingEdge : comparingEdges) {
                     linearEquationSolver solver = new linearEquationSolver(edge.getPoint1(), edge.getPoint2(), ComparingEdge.getPoint1(), ComparingEdge.getPoint2());
                     if (solver.solveEquations()) {
                         return true;

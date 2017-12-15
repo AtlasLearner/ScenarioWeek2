@@ -26,8 +26,8 @@ public abstract class Polygon {
 
         ArrayList<Coordinate> setOfPerimeterCoordinates = new ArrayList<Coordinate>(); //Will store our perimeter coordinates
 
-        ArrayList<lineSegment> edges = lineSegmentSeparator();
-        for(lineSegment edge : edges){
+        ArrayList<LineSegment> edges = lineSegmentSeparator();
+        for(LineSegment edge : edges){
             double minValue;
             double maxValue;
             char weAreFinding;
@@ -102,15 +102,15 @@ public abstract class Polygon {
         return setOfPerimeterCoordinates;
     }
 
-    public ArrayList<lineSegment> lineSegmentSeparator(){
-        ArrayList<lineSegment> segmentLineList = new ArrayList<lineSegment>();
+    public ArrayList<LineSegment> lineSegmentSeparator(){
+        ArrayList<LineSegment> segmentLineList = new ArrayList<LineSegment>();
         ArrayList<Coordinate> shapeCoordinatesList = this.getCoordinates();
 
         for(int i = 0; i < shapeCoordinatesList.size(); i++){
             if(i != (shapeCoordinatesList.size()-1)){
-                segmentLineList.add(new lineSegment(shapeCoordinatesList.get(i), shapeCoordinatesList.get(i+1)));
+                segmentLineList.add(new LineSegment(shapeCoordinatesList.get(i), shapeCoordinatesList.get(i+1)));
             }else{
-                segmentLineList.add(new lineSegment(shapeCoordinatesList.get(i), shapeCoordinatesList.get(0)));
+                segmentLineList.add(new LineSegment(shapeCoordinatesList.get(i), shapeCoordinatesList.get(0)));
             }
         }
 

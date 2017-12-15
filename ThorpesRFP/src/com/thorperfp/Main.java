@@ -1,6 +1,7 @@
 package com.thorperfp;
 
 
+import java.awt.geom.Line2D;
 import java.io.*;
 import java.util.ArrayList;
 import java.lang.Math.*;
@@ -35,21 +36,25 @@ public class Main {
             System.err.println("Error: " + e.getMessage());
         }
 
-        System.out.println(problemInstances.get(3));
-
+//        System.out.println(problemInstances.get(3));
+//
         FormatProblem formatter = new FormatProblem(problemInstances.get(3));
-        formatter.getRoomArea();
-        System.out.println();
-        formatter.getAllObjectsAreas();
-        System.out.println();
-        formatter.getAllObjectsCosts();
-        System.out.println();
-        formatter.getAllObjectsCoords();
-        formatter.displayShapesVisualiser();
+//        formatter.getRoomArea();
+//        System.out.println();
+//        formatter.getAllObjectsAreas();
+//        System.out.println();
+//        formatter.getAllObjectsCosts();
+//        System.out.println();
+//        formatter.getAllObjectsCoords();
+//        formatter.displayShapesVisualiser();
 
+        LineSegment a = new LineSegment(new Coordinate(100,100), new Coordinate(200,200));
+        LineSegment b = new LineSegment(new Coordinate(200,200), new Coordinate(300,300));
+        formatter.hasIntersect(a, b);
 
         //FillRoom fill = new FillRoom(formatter.getRoom() , formatter.getShapes());
         //fill.startFilling();
     }
+
 
 }

@@ -2,6 +2,7 @@ package com.thorperfp;
 
 import sun.security.tools.policytool.PolicyTool;
 
+import java.awt.geom.Line2D;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -117,6 +118,13 @@ public class FormatProblem {
     }
     public Room getRoom(){
         return this.room;
+    }
+    public boolean hasIntersect(LineSegment lineA, LineSegment lineB){
+        Line2D line1 = new Line2D.Double(lineA.getPoint1().getX_coordinate(), lineA.getPoint1().getY_coordinate(), lineA.getPoint2().getX_coordinate(), lineA.getPoint2().getY_coordinate());
+        Line2D line2 = new Line2D.Double(lineB.getPoint1().getX_coordinate(), lineB.getPoint1().getY_coordinate(), lineB.getPoint2().getX_coordinate(), lineB.getPoint2().getY_coordinate());
+        boolean result = line2.intersectsLine(line1);
+        System.out.println(result);
+        return result;
     }
 
 

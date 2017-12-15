@@ -1,5 +1,7 @@
 package com.thorperfp;
 
+import java.awt.geom.Line2D;
+
 public class linearEquationSolver {
     private Coordinate point11;
     private Coordinate point12;
@@ -18,6 +20,9 @@ public class linearEquationSolver {
         //Make the first equation in form Ax+By = C
         linearEquation lineSeg1 = new linearEquation(point11.getX_coordinate(), point11.getY_coordinate(), point12.getX_coordinate(), point12.getY_coordinate());
         linearEquation lineSeg2 = new linearEquation(point21.getX_coordinate(), point21.getY_coordinate(), point22.getX_coordinate(), point22.getY_coordinate());
+
+        Line2D line1 = new Line2D.Float(100, 100, 200, 200);
+        Line2D line2 = new Line2D.Float(150, 150, 150, 200);
 
         double det = lineSeg1.getA() * lineSeg2.getB() - lineSeg2.getA() * lineSeg1.getB();
         if (det == 0) {
