@@ -44,7 +44,7 @@ public class FillRoom {
                 ArrayList<Coordinate> translatedCoordinates = new ArrayList<>();
 
                 for(Coordinate point : tempShape.getCoordinates()){
-                    System.out.println("oldP: (" + point.getX() + ", " + point.getY() + ")" + " newP: (" + (point.getX()+perimeterPoint.getX()) + ", " + (point.getY()+perimeterPoint.getY()) + ")");
+                    //System.out.println("oldP: (" + point.getX() + ", " + point.getY() + ")" + " newP: (" + (point.getX()+perimeterPoint.getX()) + ", " + (point.getY()+perimeterPoint.getY()) + ")");
                     translatedCoordinates.add(new Coordinate((point.getX() +perimeterPoint.getX()),(point.getY()+perimeterPoint.getY())));
                 }
 
